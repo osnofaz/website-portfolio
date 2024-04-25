@@ -60,12 +60,11 @@ const AboutPageStyles = styled.div`
   }
   .about__subheading {
     font-size: 2.2rem;
-    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     span {
       background-color: var(--dark-text);
-      padding: 0.5rem;
+      padding: 0 0.5rem;
       border-radius: 8px;
       transition: 0.4s ease-in-out;
     }
@@ -77,8 +76,10 @@ const AboutPageStyles = styled.div`
     font-size: 3rem;
   }
   .about__heading {
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     margin-bottom: 3rem;
+    line-height: 3rem;
+    margin-top: 0.6rem;
   }
   .about__info {
     margin-bottom: 4rem;
@@ -114,14 +115,14 @@ const AboutPageStyles = styled.div`
       align-items: unset;
     }
     .about__heading {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
     }
     .about__info__heading {
       font-size: 2.5rem;
     }
     .about__span{
       margin-left: 0;
-      font-size: 40px;
+      font-size: 50px;
     }
     .title {
       font-size: 1rem;
@@ -129,6 +130,9 @@ const AboutPageStyles = styled.div`
     .items {
       left: 9rem;
       gap: 0.2rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
     .formation{
       font-size: 20px;
@@ -155,7 +159,7 @@ const AboutPageStyles = styled.div`
     font-size: 18px;
     line-height: 1.3em;
       @media only screen and (max-width: 768px) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
   }
   
   .span{
@@ -176,7 +180,7 @@ function About() {
               <p className="about__subheading">
                 {t("iam")}<div className="about__span"><span>Afonso Pereira</span></div>
               </p>
-              <h2 className="about__heading">Freelance Web Developer / Freetime Streamer</h2>
+              <h2 className="about__heading">Web Developer / Freetime Streamer</h2>
               <div className="about__info">
                 <div className="aboutmetext">
                 {t("desc1")}<br/><br/>
