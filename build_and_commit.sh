@@ -1,27 +1,25 @@
 #!/bin/bash
 
-# Define variables
-BUILD_BRANCH="build-branch"
-BUILD_COMMAND="npm run build"  # or "yarn build"
-COMMIT_MESSAGE="Build React project"
+# Run the Build (if not already built)
+npm run build  # or yarn build
 
-# Create a new branch for building
-git checkout -b "$BUILD_BRANCH"
+# Initialize Git Repository (if not already)
+git init
 
-# Run build command
-$BUILD_COMMAND
+# Add the Build Folder Contents
+for item in build/*; do
+    if [ -f "$item" ] || [ -d "$item" ]; then
+        git add "$item"
+    fi
+done
 
-# Stage only the files within the build folder
-git add build/*  # Stage files within the build folder
-git reset -- build/  # Unstage the build folder itself
+# Commit the Changes
+git commit -m "Add build folder contents"
 
-# Commit the changes
-git commit -m "$COMMIT_MESSAGE"
+# Create and Checkout a New Branch
+git checkout -b build-branch
 
-# Push the build branch to the remote repository
-git push origin "$BUILD_BRANCH"
+# Push to Git Branch
+git push origin build-branch
 
-# Switch back to the original branch
-git checkout -
-
-echo "React project has been built and committed to branch '$BUILD_BRANCH'."
+echo "Build folder contents committed and pushed to branch 'build-branch'."
