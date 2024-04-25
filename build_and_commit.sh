@@ -11,8 +11,9 @@ git checkout -b "$BUILD_BRANCH"
 # Run build command
 $BUILD_COMMAND
 
-# Add build files to Git
-git add build/
+# Stage only the files within the build folder
+git add build/*  # Stage files within the build folder
+git reset -- build/  # Unstage the build folder itself
 
 # Commit the changes
 git commit -m "$COMMIT_MESSAGE"
