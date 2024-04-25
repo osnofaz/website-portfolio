@@ -126,6 +126,10 @@ const AboutPageStyles = styled.div`
     margin-bottom: 5px;
   }
 
+  .spacing {
+    margin-bottom: 14rem;
+  }
+
   @media only screen and (max-width: 768px) {
     padding-bottom: 0px;
     .top-section {
@@ -167,6 +171,9 @@ const AboutPageStyles = styled.div`
     }
     .itemdesc{
       font-size: 13px;
+    }
+    .spacing {
+      margin-bottom: unset;
     }
    }
   .aboutmetext{
@@ -242,24 +249,26 @@ function About() {
                   </div>
                 </div>
               </AboutItemStyles>
-
+              
+              <div className="spacing">
               <AboutItemStyles>
                 <h1 className="title">{t("certificate")}</h1>
-                <div className="items" style={{ color: "white" }}>
-                  <div className="item">
-                    <h2 className="formation">Digital Marketing</h2>
-                    <p className="formationdesc">Google, IAB Europe</p>
+                  <div className="items" style={{ color: "white" }}>
+                    <div className="item">
+                      <h2 className="formation">Digital Marketing</h2>
+                      <p className="formationdesc">Google, IAB Europe</p>
+                    </div>
+                    <div className="item">
+                      <h2 className="formation">Foundations of Project Management</h2>
+                      <p className="formationdesc">Coursera</p>
+                    </div>
+                    <div className="item">
+                      <h2 className="formation">Introduction to Scrum Master Training</h2>
+                      <p className="formationdesc">Coursera</p>
+                    </div>
                   </div>
-                  <div className="item">
-                    <h2 className="formation">Foundations of Project Management</h2>
-                    <p className="formationdesc">Coursera</p>
-                  </div>
-                  <div className="item">
-                    <h2 className="formation">Introduction to Scrum Master Training</h2>
-                    <p className="formationdesc">Coursera</p>
-                  </div>
-                </div>
               </AboutItemStyles>
+              </div>
             </div>
         
             <div className="about__info__item">
