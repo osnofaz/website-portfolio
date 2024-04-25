@@ -1,8 +1,8 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
 import PText from './PText';
-import { useTranslation} from "react-i18next";
 
 
 const FooterStyle = styled.div`
@@ -30,22 +30,26 @@ const FooterStyle = styled.div`
     background-color: var(--dark-copyright);
     text-align: center;
     padding: 1rem 0;
-    margin-top: 25px;
+    margin-top: 20px;
     
   }
   @media only screen and (max-width: 768px) {
+    p{
+      text-align: center;
+    }
+    
     .container {
       flex-direction: column;
       gap: 0rem;
       & > div {
-        margin-top: 5rem;
+        margin-top: 1rem;
       }
     }
     .footer__col1 .para {
       max-width: 100%;
     }
     .copyrightz{
-      font-size: 8px;
+      font-size: 13px;
     }
     .copyright {
       .container {

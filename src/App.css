@@ -14,10 +14,9 @@
 
 .navbar-container {
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 80px;
-  max-width: 1500px;
+  max-width: 100%;
 }
 
 .navbar-logo {
@@ -144,17 +143,13 @@
 
   .navbar-logo {
     position: absolute;
-    top: 0;
-    left: -45px;
-    transform: translate(25%, 50%);
+    left: 0px;
   }
 
   .menu-icon {
     display: block;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
+    right: 25px;
     font-size: 1.8rem;
     cursor: pointer;
   }
@@ -344,7 +339,6 @@ padding: 5rem;
 
 
 .cards {
-  padding: 4rem;
   padding: 10rem 0;
   background-color: var(--dark-background);
   transition: 0.4s ease-in-out;
@@ -477,7 +471,7 @@ video {
   object-fit: cover;
   width: 100%;
   height: 92vh;
-  position: fixed;
+  position: absolute;
   z-index: -1;
 }
 

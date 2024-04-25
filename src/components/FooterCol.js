@@ -6,8 +6,9 @@ const ColStyle = styled.div`
 
   .heading {
     font-size: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
+  
   li {
     margin-bottom: 1rem;
   }
@@ -22,7 +23,8 @@ const ColStyle = styled.div`
     }
     .formatz{
       text-align:center;
-      font-size:15px;
+      font-size:17px;
+      margin-bottom: 0.6rem;
     }
 
    }
@@ -52,7 +54,7 @@ export default function FooterCol({
             {item.type === 'Link' ? (
               <Link to={item.path}>{item.title}</Link>
             ) : (
-              <a className="formatz" href={item.path} target="_blank" rel="noreferrer">
+              <a className="formatztext" href={item.path} target="_blank" rel="noreferrer">
                  {item.icon}          {item.title}
               </a>
             )}

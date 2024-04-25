@@ -5,15 +5,16 @@
     "masters":"Masters",
     "certificate":"Certificate",
     "skills":"MY SKILLS",
-    "experiences":"EXPERIENCES",
-    "graphicdesigner":"Graphic Designer at Hypercode",
-    "volunteer":"Volunteer at Rotaract Club de Abrantes",
-    "internship":"Internship at Punchline Lda.",
-    "stageactor":"Stage Actor at Grupo de Teatro Palha de Abrantes",
+    "experiences":"EXPERIENCE",
+    "graphicdesigner":"Graphic Designer",
+    "volunteer":"Volunteer",
+    "internship":"Graphic Designer",
+    "internship2":"Punchline Lda. (Internship)",
+    "stageactor":"Stage Actor",
     "desc1":"I've been in the video game world since I was a kid, playing at a competitive level since the release of Call of Duty 2 and keeping the same passion. In addition to my taste for shooters, I played World of Warcraft since Burning Crusade where I reached the Cutting Edge achievement and also played League of Legends where I reached Diamond.",
     "desc2":"Naturally, I ended up getting interested in computing where I followed the Multimedia course in the degree and Design and Multimedia in the master's (missing the dissertation to finish the same).",
     "desc3":"At the conclusion of my academic career I ended up realizing the taste I had in being able to mold graphics/tools to my liking and decided to deepen my skills using programs like Unreal Engine to develop my own mini-game and be able to play it with my friends online.",
     "conclude":"*Yet to conclude",
     "present":"Present",
-    "frontenddev":"Front-End Developer at Vodafone Portugal"
+    "frontenddev":"Front-End Developer"
 }

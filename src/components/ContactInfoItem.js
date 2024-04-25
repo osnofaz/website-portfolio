@@ -8,14 +8,14 @@ const ItemStyles = styled.div`
   background-color: var(--dark-footer);
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 3rem;
   border-radius: 8px;
   margin-bottom: 2rem;
   font-weight: bold;
   .icon {
     color: var(--dark-footer);
     background-color: var(--dark-text);
-    padding: 1.3rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,12 @@ const ItemStyles = styled.div`
   }
   .info{
     font-size: 17px;
+  }
+  @media only screen and (max-width: 768px) {
+    gap: 2rem;
+    .icon {
+      padding: 0.3rem;
+    }
   }
 `;
 

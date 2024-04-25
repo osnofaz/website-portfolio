@@ -7,38 +7,52 @@ import AboutImg from '../assets/images/about-page-img.jpg';
 
 const AboutItemStyles = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   position: relative;
-
-  /* gap: 5rem; */
-  margin-top: 4rem;
-  .title {
-    font-size: 2rem;
-  }
+  margin-bottom: 3rem;
+  
   .items {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     position: absolute;
     left: 20rem;
+    flex-wrap: wrap;
   }
+  .ruby__text{    
+    display: flex;
+    align-items: center;
+  }
+  @media only screen and (max-width: 768px) {
+    display: block;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    .items {
+      position: unset;
+      gap: 1rem;
+      left: unset;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .ruby__text{    
+      display: ruby-text;
+    }
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+
   .item {
     background-color: var(--deep-dark);
     padding: 1rem;
     border-radius: 8px;
     font-size: 16px;
     line-height: 1.3em;
-      @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
         font-size: 1.4rem;
-  }
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    .items {
-      position: initial;
-      gap: 1rem;
-    }
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
   }
 `;
 
@@ -93,15 +107,25 @@ const AboutPageStyles = styled.div`
     }
   }
   .about__info__items {
-    margin-top: 15rem;
+    margin-top: 8rem;
   }
   .about__info__item {
-    margin-bottom: 10rem;
+    margin-bottom: 9rem;
   }
   .about__info__heading {
     font-size: 3.6rem;
     text-transform: uppercase;
+    margin-bottom: 4rem;
   }
+
+  .formationdesc2{
+    margin-bottom: -10px;
+  }
+
+  .formation{
+    margin-bottom: 5px;
+  }
+
   @media only screen and (max-width: 768px) {
     padding-bottom: 0px;
     .top-section {
@@ -115,40 +139,31 @@ const AboutPageStyles = styled.div`
       align-items: unset;
     }
     .about__heading {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
     .about__info__heading {
       font-size: 2.5rem;
+      margin-bottom: 2.5rem;
     }
     .about__span{
       margin-left: 0;
-      font-size: 50px;
-    }
-    .title {
-      font-size: 1rem;
+      font-size: 45px;
     }
     .items {
-      left: 9rem;
-      gap: 0.2rem;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      gap: 0.5rem;
     }
     .formation{
-      font-size: 20px;
-      margin-top: -5px;
+      font-size: 27px;
+      text-align: center;
     }
     .formationdesc{
-      font-size: 10px;
-      margin-bottom: -10px;
-      margin-top: -10px;
+      font-size: 15px;
     }
     .item{
-      padding:0.3rem;
+      padding: 1rem;
     }
     .formationdesc2{
-      font-size: 5px;
-      margin-bottom: -10px;
+      font-size: 10px;
     }
     .itemdesc{
       font-size: 13px;
@@ -185,139 +200,180 @@ function About() {
                 <div className="aboutmetext">
                 {t("desc1")}<br/><br/>
                 {t("desc2")}<br/><br/>
-                {t("desc3")}      
-                          
-              </div>
-              </div>
-              <div className="about__button">
-              <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_EN.pdf" download="AfonsoPereiraCV_EN.pdf">Download CV - EN</a>
-              <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_PT.pdf" download="AfonsoPereiraCV_PT.pdf">Download CV - PT</a>
+                {t("desc3")}                                
+                </div>
               </div>
 
+              <div className="about__button">
+                <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_EN.pdf" download="AfonsoPereiraCV_EN.pdf">Download CV - EN</a>
+                <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_PT.pdf" download="AfonsoPereiraCV_PT.pdf">Download CV - PT</a>
+              </div>
             </div>
+
             <div className="right">
-              <img src={AboutImg} alt="me" />
+              <img src={AboutImg} alt="me"/>
             </div>
           </div>
+
           <div className="about__info__items" >
             <div className="about__info__item" >
               <h1 className="about__info__heading">{t("education")}</h1>
 
-    <AboutItemStyles>
-      <h1 className="title">{t("degree")}</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item">
-              <h2 className="formation">Multimedia</h2><p className="formationdesc">Instituto Superior Miguel Torga</p>
-          </div>
-      </div>
-    </AboutItemStyles>
-    <AboutItemStyles>
-      <h1 className="title">{t("masters")}</h1><h6>*</h6>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item">
-              <h2 className="formation">Design & Multimedia</h2><p className="formationdesc"> Universidade de Coimbra </p>  <h6 className="formationdesc2">{t("conclude")}</h6>
-          </div>
-      </div>
-    </AboutItemStyles>
-
-    <AboutItemStyles>
-      <h1 className="title">{t("certificate")}</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item">
-              <h2 className="formation">Digital Marketing</h2><p className="formationdesc">Google, IAB Europe</p>
-          </div>
-      </div>
-    </AboutItemStyles>
-
-            </div>
-            <div className="about__info__item">
-              <h1 className="about__info__heading">{t("skills")}</h1>
+              <AboutItemStyles>
+                <h1 className="title">{t("degree")}</h1>
+                <div className="items" style={{ color: "white" }}>
+                  <div className="item">
+                    <h2 className="formation">Multimedia</h2>
+                    <p className="formationdesc">Instituto Superior Miguel Torga</p>
+                  </div>
+                </div>
+              </AboutItemStyles>
 
               <AboutItemStyles>
-      <h1 className="title">FrontEnd</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item itemdesc">
-              <h2>HTML</h2>
-          </div>
-          <div className="item itemdesc">
-              <h2>CSS</h2>
-          </div>
-          <div className="item itemdesc">
-              <h2>JavaScript</h2>
-          </div>
-          <div className="item itemdesc">
-              <h2>React</h2>
-          </div>
-      </div>
-    </AboutItemStyles>
+                <div className="ruby__text">
+                <h1 className="title">{t("masters")}</h1>
+                <h6>*</h6>
+                </div>
+                <div className="items" style={{ color: "white" }}>
+                  <div className="item">
+                    <h2 className="formation">Design & Multimedia</h2>
+                    <p className="formationdesc"> Universidade de Coimbra </p>
+                    <h6 className="formationdesc2">{t("conclude")}</h6>
+                  </div>
+                </div>
+              </AboutItemStyles>
 
-    <AboutItemStyles>
-      <h1 className="title">BackEnd</h1>
-      <div className="items" style={{ color: "white" }}>
-        <div className="item itemdesc"><h2>MySQL</h2></div>
-        <div className="item itemdesc"><h2>PHP</h2></div>
-      </div>
-    </AboutItemStyles>
-
-    <AboutItemStyles>
-      <h1 className="title">Design</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item itemdesc">
-              Photoshop
-          </div>
-          <div className="item itemdesc">
-              AE
-          </div>
-          <div className="item itemdesc">
-              Illustrator
-          </div>
-          <div className="item itemdesc">
-              Premiere
-          </div>
-      </div>
-    </AboutItemStyles>
+              <AboutItemStyles>
+                <h1 className="title">{t("certificate")}</h1>
+                <div className="items" style={{ color: "white" }}>
+                  <div className="item">
+                    <h2 className="formation">Digital Marketing</h2>
+                    <p className="formationdesc">Google, IAB Europe</p>
+                  </div>
+                  <div className="item">
+                    <h2 className="formation">Foundations of Project Management</h2>
+                    <p className="formationdesc">Coursera</p>
+                  </div>
+                  <div className="item">
+                    <h2 className="formation">Introduction to Scrum Master Training</h2>
+                    <p className="formationdesc">Coursera</p>
+                  </div>
+                </div>
+              </AboutItemStyles>
             </div>
+        
+            <div className="about__info__item">
+              <h1 className="about__info__heading">{t("skills")}</h1>
+                
+                <AboutItemStyles>
+                  <h1 className="title">FrontEnd</h1>
+                  <div className="items" style={{ color: "white" }}>
+                    <div className="item itemdesc">
+                      <h2>HTML</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>CSS</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>JavaScript</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>React</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>Vue</h2>
+                    </div>
+                  </div>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
+                  <h1 className="title">BackEnd</h1>
+                  <div className="items" style={{ color: "white" }}>
+                    <div className="item itemdesc">
+                      <h2>MySQL</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>PHP</h2>
+                    </div>
+                  </div>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
+                  <h1 className="title">Design</h1>
+                  <div className="items" style={{ color: "white" }}>
+                    <div className="item itemdesc">
+                      <h2>Photoshop</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>AE</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>Illustrator</h2>
+                    </div>
+                    <div className="item itemdesc">
+                      <h2>Premiere</h2>
+                    </div>
+                  </div>
+                </AboutItemStyles>
+            </div>
+
             <div className="about__info__item">
               <h1 className="about__info__heading">{t("experiences")}</h1>
 
-              <AboutItemStyles>
+                <AboutItemStyles>
                 <h1 className="title">2022-{t("present")}</h1>
                 <div className="items" style={{ color: "white" }}>
-                  <div className="item itemdesc">{t("frontenddev")}</div>
+                  <div className="item">
+                    <h2 className="formation">{t("frontenddev")}</h2>
+                    <p className="formationdesc">Vodafone Portugal</p>
+                  </div>
                 </div>
-              </AboutItemStyles>
-              <AboutItemStyles>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
                 <h1 className="title">2020-2021</h1>
                 <div className="items" style={{ color: "white" }}>
-                  <div className="item itemdesc">{t("graphicdesigner")}</div>
+                  <div className="item">
+                    <h2 className="formation">{t("graphicdesigner")}</h2>
+                    <p className="formationdesc">Hypercode Lda.</p>
+                  </div>
                 </div>
-              </AboutItemStyles>
-              <AboutItemStyles>
-                <h1 className="title">2015-2020</h1>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
+                <h1 className="title">2015-2021</h1>
                 <div className="items" style={{ color: "white" }}>
-                  <div className="item itemdesc">{t("volunteer")}</div>
+                  <div className="item">
+                    <h2 className="formation">{t("volunteer")}</h2>
+                    <p className="formationdesc">Rotaract Club de Abrantes</p>
+                  </div>
                 </div>
-              </AboutItemStyles>
-    <AboutItemStyles>
-      <h1 className="title">2015-2015</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item itemdesc">
-              {t("internship")}
-          </div>
-      </div>
-    </AboutItemStyles>
-    <AboutItemStyles>
-      <h1 className="title">2005-2008</h1>
-      <div className="items" style={{ color: "white" }}>
-              <div className="item itemdesc">
-              {t("stageactor")}
-          </div>
-      </div>
-    </AboutItemStyles>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
+                <h1 className="title">2015-2015</h1>
+                <div className="items" style={{ color: "white" }}>
+                  <div className="item">
+                    <h2 className="formation">{t("internship")}</h2>
+                    <p className="formationdesc">{t("internship2")}</p>
+                  </div>
+                </div>
+                </AboutItemStyles>
+
+                <AboutItemStyles>
+                <h1 className="title">2005-2008</h1>
+                <div className="items" style={{ color: "white" }}>
+                  <div className="item">
+                    <h2 className="formation">{t("stageactor")}</h2>
+                    <p className="formationdesc">Grupo de Teatro Palha de Abrantes</p>
+                  </div>
+                </div>
+                </AboutItemStyles>
+
             </div>
-          </div>
         </div>
-      </AboutPageStyles>
+        </div>
+    </AboutPageStyles>
       <Footer />
     </>
     );
