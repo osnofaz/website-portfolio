@@ -67,11 +67,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-.nav-linkz{
-  align-content: center;
-  justify-content: center;
-  display: inline-block;
-}
+  .nav-linkz{
+    align-content: center;
+    justify-content: center;
+    display: inline-block;
+  }
+
+  .navbar-container {
+    max-width: none;
+  }
 }
 
 .nav-linkz {
