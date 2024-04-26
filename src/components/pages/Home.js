@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import '../../App.css';
 import ServicesSection from '../ServicesSection';
 // import ProjectsSection from '../ProjectsSection';
-import Footer from '../Footer';
-import '../Button.css';
-import { Link } from 'react-router-dom';
-import Modal from '../Modal';
-import styled from 'styled-components';
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import '../Button.css';
 import Cards from '../Cards';
-import { useTranslation} from "react-i18next";
+import Footer from '../Footer';
+import Modal from '../Modal';
 
 
 
@@ -25,7 +25,7 @@ function Home() {
          
 
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video controls="false" src='/videos/video-1.mp4' autoPlay loop muted />
       <h1>AFONSO "OSNOFAZ" PEREIRA</h1>
       <div className="i-title">
       <p>{t("iama")}</p>

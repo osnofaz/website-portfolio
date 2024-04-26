@@ -300,17 +300,17 @@ input:checked + .slider:before {
 }
 
 html, #root {
-  font-family: 'Poppins', sans-serif;
   color: var(--dark-text);
   height: 100%;
 }
 
 body {
+  font-family: 'Poppins';
   height: 100%;
 }
 
 button {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
 }
 
 

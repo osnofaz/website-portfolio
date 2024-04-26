@@ -30,6 +30,7 @@ const useForm = (callback, validate) => {
     
   };
 
+  // eslint-disable-next-line
   const memoizedCallback = useCallback(callback, []);
 
   useEffect(() => {
