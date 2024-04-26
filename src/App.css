@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Poppins;
+  src: url('https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1Jl.woff2') format('woff2'); /* Google Fonts URL */
+  font-display: swap;
+}
+
 /* navbar */
 .navbar {
   background-color:  var(--dark-background);

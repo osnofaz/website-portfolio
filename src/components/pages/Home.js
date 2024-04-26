@@ -25,7 +25,7 @@ function Home() {
          
 
     <div className='hero-container'>
-      <video controls="false" src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='/videos/video-1.mp4' autoPlay loop muted />
       <h1>AFONSO "OSNOFAZ" PEREIRA</h1>
       <div className="i-title">
       <p>{t("iama")}</p>
