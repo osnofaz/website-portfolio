@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { useCallback, useEffect, useState } from 'react';
 
 const useForm = (callback, validate) => {
 
@@ -30,20 +30,20 @@ const useForm = (callback, validate) => {
     
   };
 
-  useEffect(
-    () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        emailjs.send('service_w52syad', 'template_kqjsrcs', values, 'jz3fzMXNhPfdplahd')
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
+  const memoizedCallback = useCallback(callback, []);
+
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && isSubmitting) {
+      emailjs.send('service_w52syad', 'template_kqjsrcs', values, 'jz3fzMXNhPfdplahd')
+      .then((result) => {
+          console.log(result.text);
+      })
+      .catch((error) => {
+          console.log(error.text);
       });
-        callback();
-      }
-    },
-    [errors]
-  );
+      memoizedCallback();
+    }
+  }, [errors, memoizedCallback, isSubmitting, values]);
 
   return { handleChange, handleSubmit, values, errors };
 };

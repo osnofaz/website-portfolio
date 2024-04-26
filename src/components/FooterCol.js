@@ -54,7 +54,7 @@ export default function FooterCol({
             {item.type === 'Link' ? (
               <Link to={item.path}>{item.title}</Link>
             ) : (
-              <a className="formatztext" href={item.path} target="_blank" rel="noreferrer">
+              <a className="formatztext" rel="noopener noreferrer" href={item.path} target="_blank">
                  {item.icon}          {item.title}
               </a>
             )}

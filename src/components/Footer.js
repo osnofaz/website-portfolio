@@ -147,7 +147,7 @@ export default function Footer() {
         <div className="container copyrightz">
           <PText>
             © 2024 - Osnofaz | {t('designedby')}{' '}
-            <a target="_blank" style={{color: 'var(--dark-text)'}} rel="noreferrer" href="https://www.afonsopereira.com">
+            <a target="_blank" style={{color: 'var(--dark-text)'}} rel="noopener noreferrer" href="https://www.afonsopereira.com">
               Afonso Pereira
             </a>{' '}
           </PText>

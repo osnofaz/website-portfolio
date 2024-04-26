@@ -1,3 +1,4 @@
+import React from 'react';
 import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro } from 'react-icons/si';
 import { v4 as uuidv4 } from 'uuid';
 import WebpageBanner from '../images/BannerBoomBap.gif';
@@ -9,7 +10,6 @@ import PostNSImg from '../images/SocialMediaPosts.gif';
 import RejuvemedStandImg2 from '../images/Stand2.png';
 import StandACLImg from '../images/StandACL.gif';
 import StandACLImg2 from '../images/StandACL.jpeg';
-
 
 const projects = [
   {

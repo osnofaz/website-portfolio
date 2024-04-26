@@ -19,7 +19,7 @@
     "react-modal": "^3.14.4",
     "react-modal-video": "^1.2.8",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^3.0.1",
     "react-smooth-scrollbar": "^8.0.6",
     "smooth-scrollbar": "^8.7.4",
     "styled-components": "^5.3.3",
