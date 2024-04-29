@@ -21,6 +21,16 @@ const AboutItemStyles = styled.div`
     display: flex;
     align-items: center;
   }
+
+  .margin__skill{    
+    margin-bottom: 0;
+  }
+
+  .top__reset {
+    top: 0;
+  }
+
+
   @media only screen and (max-width: 768px) {
     display: block;
     gap: 1rem;
@@ -40,6 +50,22 @@ const AboutItemStyles = styled.div`
       font-size: 1.5rem;
       margin-bottom: 10px;
     }
+  }
+
+  @media only screen and (max-width: 960px) {
+    .items {
+      left: 17rem;
+      gap: 0.5rem;
+    }
+
+    .margin__skill {
+      margin-bottom: 4rem;
+    }
+
+    .top__reset {
+      top: 0;
+    }
+
   }
 
   .item {
@@ -128,6 +154,19 @@ const AboutPageStyles = styled.div`
 
   .spacing {
     margin-bottom: 14rem;
+  }
+
+  @media only screen and (max-width: 960px) {
+    .about__subheading {
+      display: unset;
+    }
+    .about__span {
+      margin-left: unset;
+    }
+
+    .margin__formation {
+      margin-bottom: 21rem;
+    }
   }
 
   @media only screen and (max-width: 768px) {
@@ -250,7 +289,7 @@ function About() {
                 </div>
               </AboutItemStyles>
               
-              <div className="spacing">
+              <div className="spacing margin__formation">
               <AboutItemStyles>
                 <h1 className="title">{t("certificate")}</h1>
                   <div className="items" style={{ color: "white" }}>
@@ -275,8 +314,9 @@ function About() {
               <h1 className="about__info__heading">{t("skills")}</h1>
                 
                 <AboutItemStyles>
+                  <div className="margin__skill">
                   <h1 className="title">FrontEnd</h1>
-                  <div className="items" style={{ color: "white" }}>
+                  <div className="items top__reset" style={{ color: "white" }}>
                     <div className="item itemdesc">
                       <h2>HTML</h2>
                     </div>
@@ -292,6 +332,7 @@ function About() {
                     <div className="item itemdesc">
                       <h2>Vue</h2>
                     </div>
+                  </div>
                   </div>
                 </AboutItemStyles>
 

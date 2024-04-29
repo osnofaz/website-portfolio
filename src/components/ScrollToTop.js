@@ -44,6 +44,11 @@ const Div = styled.div`
       padding: 1rem;
 
       }
+
+      @media only screen and (max-width: 960px) {
+        left: 90vw;
+  
+        }
   }
 `;
 
