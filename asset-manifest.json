@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6f33d40.css",
-    "main.js": "/static/js/main.976a4c3d.js",
+    "main.css": "/static/css/main.a1df9928.css",
+    "main.js": "/static/js/main.ef1f56b6.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
     "static/media/SocialMediaPosts.gif": "/static/media/SocialMediaPosts.3c0521b71c3e97ec7bc3.gif",
@@ -13,16 +13,15 @@
     "static/media/projectImg.png": "/static/media/projectImg.b84cc5fcc74ce4d59232.png",
     "static/media/OutdoorRejuvemed.jpg": "/static/media/OutdoorRejuvemed.8a418a52a4b2e5bd284c.jpg",
     "static/media/about-page-img.jpg": "/static/media/about-page-img.e5eec0796457f81b6523.jpg",
-    "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/AfonsoPereiraCV.pdf": "/static/media/AfonsoPereiraCV.465dca57086ddde01993.pdf",
     "static/media/StandACL.jpeg": "/static/media/StandACL.852d3bf8b6a104b53b49.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.c6f33d40.css.map": "/static/css/main.c6f33d40.css.map",
-    "main.976a4c3d.js.map": "/static/js/main.976a4c3d.js.map"
+    "main.a1df9928.css.map": "/static/css/main.a1df9928.css.map",
+    "main.ef1f56b6.js.map": "/static/js/main.ef1f56b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6f33d40.css",
-    "static/js/main.976a4c3d.js"
+    "static/css/main.a1df9928.css",
+    "static/js/main.ef1f56b6.js"
   ]
 }
