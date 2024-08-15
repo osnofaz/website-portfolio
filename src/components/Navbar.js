@@ -7,6 +7,7 @@ import Toggle from './Toggle';
 
 function Navbar() {
     const [click, setClick] = useState(false);
+    const [navColour, updateNavbar] = useState(false);
     
     const handleClick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
@@ -21,10 +22,20 @@ function Navbar() {
     const handleLanguageChange = (e) => {
         i18n.changeLanguage(e.target.value);
     }
+        function scrollHandler() {
+            if (window.scrollY >= 20) {
+              updateNavbar(true);
+            } else {
+              updateNavbar(false);
+            }
+    }
+    
+    window.addEventListener("scroll", scrollHandler);
+
     
     return (
         <>
-        <nav className='navbar'>
+        <nav className={navColour ? "navbar sticky" : "navbar"}>
           <div className='navbar-container' >
              <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                  OSNOFAZ 
@@ -67,7 +78,7 @@ function Navbar() {
                     <Toggle/>
                 </li>
                 <li className='nav-item'>
-                    <select className='nav-linkz' value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange}>
+                    <select className={navColour ? "nav-linkz transparent" : "nav-linkz"} value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange}>
                         <option className='nav-linkz' value="en">EN</option>
                         <option className='nav-linkz' value="pt">PT</option>
                     </select>

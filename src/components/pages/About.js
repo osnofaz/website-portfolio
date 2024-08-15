@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
+import { AiOutlineDownload } from "react-icons/ai";
 import styled from 'styled-components';
+import pdf from "../assets/files/AfonsoPereiraCV.pdf";
 import AboutImg from '../assets/images/about-page-img.jpg';
 import Footer from '../Footer';
 import Particle from '../Particle';
@@ -89,7 +91,7 @@ const AboutPageStyles = styled.div`
   z-index: 1;
   position: relative;
   margin-top: 50px;
-  
+
   .top-section {
     display: flex;
     align-items: center;
@@ -256,9 +258,7 @@ function About() {
               </div>
 
               <div className="about__button">
-                <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_EN.pdf" download="AfonsoPereiraCV_EN.pdf">Download CV - EN</a>
-                <a className="botaodownload" type="submit" href="/files/AfonsoPereiraCV_PT.pdf" download="AfonsoPereiraCV_PT.pdf">Download CV - PT</a>
-              </div>
+              <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> Download CV</a>              </div>
             </div>
 
             <div className="right">

@@ -29,7 +29,7 @@ export default function Stream() {
         <>
         <Particle />
           <ProjectStyle>
-          <div className="container">
+          <div className="container" style={{ marginBottom: "55px" }}>
             <SectionTitle
               heading="STREAM"
               subheading={t("streamdesc")}
@@ -49,7 +49,6 @@ export default function Stream() {
             </div>
             </div>
           </div>
-
           </ProjectStyle>
           <Footer />
         </>

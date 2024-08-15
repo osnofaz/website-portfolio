@@ -5,6 +5,7 @@ import GlobalStyles from './components/styles/GlobalStyle';
 import Typography from './components/styles/Typography';
 
 import "./i18n";
+import "./index.css";
 
 ReactDOM.render(
     <>

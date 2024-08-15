@@ -3,10 +3,10 @@ import './styles/toggle.css';
 import { setTheme } from './utils/themes';
 
 function Toggle() {
-    // false = dark mode because of the way I wrote the CSS
-    const [active, setActive] = useState(false)
-    // the opposite, for screen readers
-    const [ariaActive, setAriaActive] = useState(true)
+    const [active, setActive] = useState(false);
+    const [ariaActive, setAriaActive] = useState(true);
+    const [navColour, updateNavbar] = useState(false);
+
     let theme = localStorage.getItem('theme')
 
     const changeThemeAndToggle = () => {
@@ -43,9 +43,19 @@ function Toggle() {
 
     const [darkMode, setDarkMode] = useState(false);
 
+    function scrollHandler() {
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
+    }
+
+    window.addEventListener("scroll", scrollHandler);
+
     return (
-        <div className={darkMode}>
-      <div className="containerswitch">
+      <div className={darkMode}>
+      <div className={navColour ? "containerswitch transparent" : "containerswitch"}>
       <span style={{ color: "var(--dark-lua)" }}>☽</span>
       <div className="switch-checkbox">
       <label htmlFor="toggle" className="switch">

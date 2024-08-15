@@ -46,7 +46,7 @@ const Div = styled.div`
       }
 
       @media only screen and (max-width: 960px) {
-        left: 90vw;
+        left: 85w;
   
         }
   }

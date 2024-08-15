@@ -17,10 +17,11 @@ function ResumeNew() {
   return (
     <>
      <Particle />
+     <div style={{ marginBottom: "160px" }}>
       <Container fluid className="resume-section">
         <Row style={{ justifyContent: "center", position: "relative" }}>
         <div>
-          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV_EN.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> Download CV</a>
+          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> Download CV</a>
         </div>
         </Row>
 
@@ -32,10 +33,11 @@ function ResumeNew() {
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
         <div>
-          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV_EN.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> Download CV</a>
+          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> Download CV</a>
         </div>
         </Row>
       </Container>
+      </div>
       <Footer />
     </>
   );

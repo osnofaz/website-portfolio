@@ -56,7 +56,6 @@ function Home() {
 
       <ServicesSection />
       <Cards />
-      {/* <ProjectsSection /> */}
       <Footer />
     </>
   );

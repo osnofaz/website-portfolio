@@ -75,7 +75,7 @@ export default function ContactSection() {
     <>
     <Particle />
     <ContactSectionStyle>
-          <div className="container">
+          <div className="container" style={{ marginBottom: "50px" }}>
               <SectionTitle heading={t("contacttitle")} subheading={t("geintouch")}/>
               <div className="contactSection__wrapper">
                   <div className="left">
@@ -92,7 +92,9 @@ export default function ContactSection() {
                   </div>
               </div>
           </div>
-      </ContactSectionStyle><Footer /></>
+      </ContactSectionStyle>
+      <Footer />
+      </>
   );
 
 }
