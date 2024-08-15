@@ -9,6 +9,9 @@ const FooterStyle = styled.div`
   background-color: var(--dark-footer);
   padding-top: 30px;
   transition: 0.4s ease-in-out;
+  position: relative;
+  background-color: var(--dark-footer);
+  z-index: 0;
 
   .container {
     display: flex;

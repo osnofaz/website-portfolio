@@ -1,19 +1,21 @@
-import React, {useState} from 'react';
-import styled from 'styled-components';
-import { MdEmail } from 'react-icons/md';
-import { FaDiscord } from "react-icons/fa";
-import ContactForm from '../ContactForm';
-import ContactSuccess from '../ContactSuccess';
-import ContactInfoItem from '../ContactInfoItem';
-import SectionTitle from '../SectionTitle';
-import Footer from '../Footer';
+import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
+import { FaDiscord } from "react-icons/fa";
+import { MdEmail } from 'react-icons/md';
+import styled from 'styled-components';
+import ContactForm from '../ContactForm';
+import ContactInfoItem from '../ContactInfoItem';
+import ContactSuccess from '../ContactSuccess';
+import Footer from '../Footer';
+import Particle from '../Particle';
+import SectionTitle from '../SectionTitle';
 
 
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
-  background-color: var(--dark-background);
+  z-index: 1;
+  position: relative;
   transition: 0.4s ease-in-out;
   .contactSection__wrapper {
     display: flex;
@@ -70,7 +72,9 @@ export default function ContactSection() {
     setIsSubmitted(true);
   }
   return (
-    <><ContactSectionStyle>
+    <>
+    <Particle />
+    <ContactSectionStyle>
           <div className="container">
               <SectionTitle heading={t("contacttitle")} subheading={t("geintouch")}/>
               <div className="contactSection__wrapper">

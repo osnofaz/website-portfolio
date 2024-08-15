@@ -1,18 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import '../../App.css';
-import styled from 'styled-components';
+import { useTranslation } from "react-i18next";
 import { MdSearch } from 'react-icons/md';
+import styled from 'styled-components';
+import '../../App.css';
 import ProjectsInfo from '../assets/data/projects';
-import SectionTitle from '../SectionTitle';
-import ProjectItem from '../ProjectItem';
 import Footer from '../Footer';
-import { useTranslation} from "react-i18next";
+import Particle from "../Particle";
+import ProjectItem from '../ProjectItem';
+import SectionTitle from '../SectionTitle';
 
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
-  background-color: var(--dark-background);
   transition: 0.4s ease-in-out;
+  z-index: 1;
+  position: relative;
+  
   .projects__allItems {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -72,9 +75,10 @@ const {t} = useTranslation(['home']);
       setProjectsData(ProjectsInfo);
     }
   };
+
   return (
-    
     <>
+      <Particle />
       <ProjectStyle>
         <div className="container">
           <SectionTitle

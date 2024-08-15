@@ -1,9 +1,9 @@
 import React from 'react';
-import { MdDesktopMac, MdCode, MdDesignServices } from 'react-icons/md';
+import { useTranslation } from "react-i18next";
+import { MdCode, MdDesignServices, MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
-import { useTranslation} from "react-i18next";
 
 const ServicesItemsStyles = styled.div`
   .services__allItems {
@@ -27,7 +27,7 @@ export default function ServicesSection() {
   const {t} = useTranslation(['home']);
   return (
     <ServicesItemsStyles>
-       <div className='cards'>
+      <div className='cards'>
       <div className="container">
         <SectionTitle subheading={t('subheading')} heading={t('services')} />
         <div className="services__allItems">

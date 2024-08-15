@@ -1,8 +1,9 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
-import Footer from '../Footer';
 import AboutImg from '../assets/images/about-page-img.jpg';
+import Footer from '../Footer';
+import Particle from '../Particle';
 
 
 const AboutItemStyles = styled.div`
@@ -84,8 +85,11 @@ const AboutItemStyles = styled.div`
 
 const AboutPageStyles = styled.div`
   padding: 5rem 0 10rem 0;
-  background-color: var(--dark-background);
   transition: 0.4s ease-in-out;
+  z-index: 1;
+  position: relative;
+  margin-top: 50px;
+  
   .top-section {
     display: flex;
     align-items: center;
@@ -234,6 +238,7 @@ function About() {
 
     return (
       <>
+        <Particle />
         <AboutPageStyles>
         <div className="container">
           <div className="top-section">

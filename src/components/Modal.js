@@ -51,6 +51,7 @@ const Overlay = styled.div`
 	display: flex;
 	align-items: ${props => props.posicionModal ? props.posicionModal : 'center'};
 	justify-content: center;
+	z-index: 2;
 `;
 
 const ContenedorModal = styled.div`

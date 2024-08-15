@@ -1,8 +1,8 @@
-import React, { useEffect, useState} from 'react'
-import {Link} from 'react-router-dom';
-import Toggle from './Toggle'
-import {useTranslation} from "react-i18next";
 import i18next from "i18next";
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
+import Toggle from './Toggle';
 
 
 function Navbar() {
@@ -41,6 +41,11 @@ function Navbar() {
                  <li className='nav-item'>
                      <Link to ='/about' className='nav-links' onClick={closeMobileMenu}>
                      {t("aboutmenav")}
+                     </Link>
+                 </li>
+                 <li className='nav-item'>
+                     <Link to ='/resume' className='nav-links' onClick={closeMobileMenu}>
+                     {t("resumenav")}
                      </Link>
                  </li>
                  <li className='nav-item'>

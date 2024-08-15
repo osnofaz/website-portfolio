@@ -1,19 +1,15 @@
-import React, { useState } from 'react';
-import '../../App.css';
-import ServicesSection from '../ServicesSection';
-// import ProjectsSection from '../ProjectsSection';
 import PropTypes from "prop-types";
+import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import '../../App.css';
 import '../Button.css';
 import Cards from '../Cards';
 import Footer from '../Footer';
 import Modal from '../Modal';
-
-
-
-
+import Particle from '../Particle';
+import ServicesSection from '../ServicesSection';
 
 
 function Home() {
@@ -22,21 +18,21 @@ function Home() {
 
   return (
     <>
-         
-
+    <Particle />
+    
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>AFONSO "OSNOFAZ" PEREIRA</h1>
-      <div className="i-title">
-      <p>{t("iama")}</p>
-      <div className="i-title-wrapper">
-      <div className="i-title-item">WEB DEVELOPER</div>
-      <div className="i-title-item">{t("uiuxdesigner")}</div>
-      <div className="i-title-item">{t("graphicdesigner")}</div>
-      <div className="i-title-item">STREAMER</div>
-      <div className="i-title-item">GAMER</div>
-      </div>
-      </div>
+      <h1 style={{ zIndex: "1"}}>AFONSO "OSNOFAZ" PEREIRA</h1>
+        <div className="i-title">
+        <p>{t("iama")}</p>
+          <div className="i-title-wrapper">
+            <div className="i-title-item">WEB DEVELOPER</div>
+            <div className="i-title-item">{t("uiuxdesigner")}</div>
+            <div className="i-title-item">{t("graphicdesigner")}</div>
+            <div className="i-title-item">STREAMER</div>
+            <div className="i-title-item">GAMER</div>
+          </div>
+        </div>
       <div className='hero-btns'>
         <Link to="./about">
       <button className="btn btn--outline btn--large" > {t("aboutme")} </button>

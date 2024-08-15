@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaChevronUp } from "react-icons/fa";
+import { AiOutlineUp } from "react-icons/ai";
 import styled from "styled-components";
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
@@ -9,7 +9,7 @@ function ScrollToTop() {
   return (
     <Div>
       <a href="# " className={`${visible ? "block" : "none"}`}>
-        <FaChevronUp />
+        <AiOutlineUp />
       </a>
     </Div>
   );
