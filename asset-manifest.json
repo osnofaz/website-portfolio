@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.145de954.css",
-    "main.js": "/static/js/main.0ceb60af.js",
+    "main.css": "/static/css/main.c6f33d40.css",
+    "main.js": "/static/js/main.976a4c3d.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
     "static/media/SocialMediaPosts.gif": "/static/media/SocialMediaPosts.3c0521b71c3e97ec7bc3.gif",
     "static/media/BannerBoomBap.gif": "/static/media/BannerBoomBap.cee3e3b509831a757772.gif",
     "static/media/Stand2.png": "/static/media/Stand2.f1aa458c4e94225981dc.png",
+    "pdf.worker.js": "/b9aa902ce544b1d1521adeca1b009127.js",
     "static/media/StandACL.gif": "/static/media/StandACL.d36c3504307428563c57.gif",
     "static/media/PostRafPhil.png": "/static/media/PostRafPhil.b84cc5fcc74ce4d59232.png",
     "static/media/projectImg.png": "/static/media/projectImg.b84cc5fcc74ce4d59232.png",
     "static/media/OutdoorRejuvemed.jpg": "/static/media/OutdoorRejuvemed.8a418a52a4b2e5bd284c.jpg",
     "static/media/about-page-img.jpg": "/static/media/about-page-img.e5eec0796457f81b6523.jpg",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/AfonsoPereiraCV.pdf": "/static/media/AfonsoPereiraCV.465dca57086ddde01993.pdf",
     "static/media/StandACL.jpeg": "/static/media/StandACL.852d3bf8b6a104b53b49.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.145de954.css.map": "/static/css/main.145de954.css.map",
-    "main.0ceb60af.js.map": "/static/js/main.0ceb60af.js.map"
+    "main.c6f33d40.css.map": "/static/css/main.c6f33d40.css.map",
+    "main.976a4c3d.js.map": "/static/js/main.976a4c3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.145de954.css",
-    "static/js/main.0ceb60af.js"
+    "static/css/main.c6f33d40.css",
+    "static/js/main.976a4c3d.js"
   ]
 }
