@@ -29,7 +29,7 @@ export default function ServicesSection() {
     <ServicesItemsStyles>
       <div className='cards'>
       <div className="container">
-        <SectionTitle subheading={t('subheading')} heading={t('services')} />
+        <SectionTitle subheading="" heading={t('services')} />
         <div className="services__allItems">
         <ServicesSectionItem
             icon={<MdDesignServices />}

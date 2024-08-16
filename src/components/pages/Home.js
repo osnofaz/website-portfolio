@@ -6,10 +6,12 @@ import styled from 'styled-components';
 import '../../App.css';
 import '../Button.css';
 import Cards from '../Cards';
+import FindMeSection from '../FindMeSection';
 import Footer from '../Footer';
 import Modal from '../Modal';
 import Particle from '../Particle';
 import ServicesSection from '../ServicesSection';
+
 
 
 function Home() {
@@ -53,9 +55,9 @@ function Home() {
         <YoutubeEmbed embedId="VnnJXAvE6OU" />
 				</Contenido>
 			</Modal>
-
       <ServicesSection />
-      <Cards />
+      <FindMeSection />
+      {/* <Cards /> */}
       <Footer />
     </>
   );

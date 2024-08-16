@@ -78,9 +78,9 @@ function Navbar() {
                     <Toggle/>
                 </li>
                 <li className='nav-item'>
-                    <select className={navColour ? "nav-linkz transparent" : "nav-linkz"} value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange}>
-                        <option className='nav-linkz' value="en">EN</option>
-                        <option className='nav-linkz' value="pt">PT</option>
+                    <select className="nav-linkz transparent" value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange}>
+                        <option className='nav-option' value="en">EN</option>
+                        <option className='nav-option' value="pt">PT</option>
                     </select>
                 </li>
              </ul>
