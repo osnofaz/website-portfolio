@@ -1,6 +1,7 @@
 {
     "iam": "Hi, I am",
-    "education":"EDUCATION",
+    "skillset":"PROFESSIONAL SKILLSET",
+    "toolset":"TOOLS I USE",
     "degree":"Degree",
     "masters":"Masters",
     "certificate":"Certificate",
@@ -11,10 +12,13 @@
     "internship":"Graphic Designer",
     "internship2":"Punchline Lda. (Internship)",
     "stageactor":"Stage Actor",
-    "desc1":"I've been in the video game world since I was a kid, playing at a competitive level since the release of Call of Duty 2 and keeping the same passion. In addition to my taste for shooters, I played World of Warcraft since Burning Crusade where I reached the Cutting Edge achievement and also played League of Legends where I reached Diamond.",
-    "desc2":"Naturally, I ended up getting interested in computing where I followed the Multimedia course in the degree and Design and Multimedia in the master's (missing the dissertation to finish the same).",
-    "desc3":"At the conclusion of my academic career I ended up realizing the taste I had in being able to mold graphics/tools to my liking and decided to deepen my skills using programs like Unreal Engine to develop my own mini-game and be able to play it with my friends online.",
+    "desc1":"I've been in the video game world since I was a kid, playing at a competitive level since the release of Call of Duty 2. In addition to my special liking for shooters, I also played World of Warcraft since Burning Crusade, having achieved the Cutting Edge achievement, and League of Legends in which I achieved Diamond.",
+    "desc2":"Naturally, I ended up getting interested in computing and web design, having finished a Multimedia bachelor's degree in 2018. In the same year, I started a Design and Multimedia Master's which is ongoing - already finished all lectures but did not yet submit the final dissertation..",
+    "desc3":"Whenever possible, I also apply my passion for developing products with",
+    "desc3.1":"Node.js and Modern Javascript Library and Frameworks like React.js and Next.js",
+    "desc3.2":" but also like to develop little projects in Unreal Engine to play custom games with friends.",
     "conclude":"*Yet to conclude",
     "present":"Present",
-    "frontenddev":"Front-End Developer"
+    "frontenddev":"Front-End Developer",
+    "lang":"en"
 }
