@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import '../../App.css';
 import '../Button.css';
-import Cards from '../Cards';
 import FindMeSection from '../FindMeSection';
 import Footer from '../Footer';
 import Modal from '../Modal';
@@ -23,7 +22,7 @@ function Home() {
     <Particle />
     
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+      <video src='/videos/video-1.mp4' playsInline autoPlay loop muted />
       <h1 style={{ zIndex: "1"}}>AFONSO "OSNOFAZ" PEREIRA</h1>
         <div className="i-title">
         <p>{t("iama")}</p>
