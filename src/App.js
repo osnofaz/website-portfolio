@@ -20,7 +20,6 @@ function App() {
     <Router>
       <Suspense fallback={null}> 
       <Navbar />      
-      <ScrollToTop />
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -29,6 +28,7 @@ function App() {
             <Route path='/stream' element={<Stream />} />
             <Route path='/contact' element={<Contact />} />
           </Routes>
+          <ScrollToTop />
       </Suspense > 
     </Router>
  );
