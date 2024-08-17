@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.94bb534d.css",
-    "main.js": "/static/js/main.8a08f57e.js",
+    "main.js": "/static/js/main.4ebe8bf2.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
     "static/media/SocialMediaPosts.gif": "/static/media/SocialMediaPosts.3c0521b71c3e97ec7bc3.gif",
@@ -18,10 +18,10 @@
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "main.94bb534d.css.map": "/static/css/main.94bb534d.css.map",
-    "main.8a08f57e.js.map": "/static/js/main.8a08f57e.js.map"
+    "main.4ebe8bf2.js.map": "/static/js/main.4ebe8bf2.js.map"
   },
   "entrypoints": [
     "static/css/main.94bb534d.css",
-    "static/js/main.8a08f57e.js"
+    "static/js/main.4ebe8bf2.js"
   ]
 }
