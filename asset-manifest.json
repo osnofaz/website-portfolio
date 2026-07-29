@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.94bb534d.css",
-    "main.js": "/static/js/main.cfcb7213.js",
+    "main.css": "/static/css/main.d39d86bc.css",
+    "main.js": "/static/js/main.bbb34724.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
     "static/media/SocialMediaPosts.gif": "/static/media/SocialMediaPosts.3c0521b71c3e97ec7bc3.gif",
     "static/media/BannerBoomBap.gif": "/static/media/BannerBoomBap.cee3e3b509831a757772.gif",
     "static/media/Stand2.png": "/static/media/Stand2.f1aa458c4e94225981dc.png",
-    "pdf.worker.js": "/b9aa902ce544b1d1521adeca1b009127.js",
+    "pdf.worker.js": "/2536c5c8133e3bd71ce018f8a692a4aa.js",
     "static/media/StandACL.gif": "/static/media/StandACL.d36c3504307428563c57.gif",
     "static/media/PostRafPhil.png": "/static/media/PostRafPhil.b84cc5fcc74ce4d59232.png",
     "static/media/projectImg.png": "/static/media/projectImg.b84cc5fcc74ce4d59232.png",
@@ -17,11 +17,11 @@
     "static/media/StandACL.jpeg": "/static/media/StandACL.852d3bf8b6a104b53b49.jpeg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.94bb534d.css.map": "/static/css/main.94bb534d.css.map",
-    "main.cfcb7213.js.map": "/static/js/main.cfcb7213.js.map"
+    "main.d39d86bc.css.map": "/static/css/main.d39d86bc.css.map",
+    "main.bbb34724.js.map": "/static/js/main.bbb34724.js.map"
   },
   "entrypoints": [
-    "static/css/main.94bb534d.css",
-    "static/js/main.cfcb7213.js"
+    "static/css/main.d39d86bc.css",
+    "static/js/main.bbb34724.js"
   ]
 }
