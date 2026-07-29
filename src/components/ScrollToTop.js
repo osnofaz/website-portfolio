@@ -1,14 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineUp } from "react-icons/ai";
 import styled from "styled-components";
+
 function ScrollToTop() {
   const [visible, setVisible] = useState(false);
-  window.addEventListener("scroll", () => {
-    window.pageYOffset > 100 ? setVisible(true) : setVisible(false);
-  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.pageYOffset > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    const duration = 500;
+    const start = window.pageYOffset;
+    const startTime = performance.now();
+
+    const animateScroll = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      window.scrollTo(0, start * (1 - ease));
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+
+    requestAnimationFrame(animateScroll);
+  };
+
   return (
     <Div>
-      <a href="# " className={`${visible ? "block" : "none"}`}>
+      <a
+        href="#"
+        className={`${visible ? "block" : "none"}`}
+        onClick={scrollToTop}
+      >
         <AiOutlineUp />
       </a>
     </Div>
@@ -42,13 +72,10 @@ const Div = styled.div`
       right: initial;
       bottom: 50px;
       padding: 1rem;
-
-      }
-
-      @media only screen and (max-width: 960px) {
-        left: 85w;
-  
-        }
+    }
+    @media only screen and (max-width: 960px) {
+      left: 85w;
+    }
   }
 `;
 

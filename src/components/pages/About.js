@@ -169,14 +169,14 @@ function About() {
               <p className="about__subheading">
                 {t("iam")}<div className="about__span"><span>Afonso Pereira</span></div>
               </p>
-              <h2 className="about__heading">Web Developer / Freetime Streamer</h2>
+              <h2 className="about__heading">{t("subheading")}</h2>
               <div className="about__info">
                 <div className="aboutmetext">
                 {t("desc1")}<br/><br/>
                 {t("desc2")}<br/><br/>
-                {t("desc3")}  {t('lang') === 'en' ? (
+                {t("desc3")}<br/><br/>
+                {t("desc4")}  {t('lang') === 'en' ? (
             <>
-                <span style={{ fontWeight: "bold" }}>{t("desc3.1")}</span> {t("desc3.2")}
             </>
         ) : ("")}                        
                 </div>

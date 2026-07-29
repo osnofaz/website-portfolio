@@ -93,6 +93,10 @@ const Contenido = styled.div`
 
 
 const ProjectItemStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   .projectItem__img {
     height: 400px;
     border-radius: 12px;
@@ -105,6 +109,7 @@ const ProjectItemStyles = styled.div`
     }
   }
   .projectItem__info {
+    flex: 1;
     margin-top: 1rem;
     background-color: var(--dark-footer);
     padding: 1rem;
@@ -112,6 +117,10 @@ const ProjectItemStyles = styled.div`
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    
+    .btn {
+      margin-top: auto;
+    }
   }
   .projectItem__title {
     font-size: 2.2rem;
@@ -130,4 +139,5 @@ const ProjectItemStyles = styled.div`
     .projectItem__img{
       height: 300px;
     }
+  }
 `;

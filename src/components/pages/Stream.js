@@ -36,13 +36,20 @@ export default function Stream() {
             />
             <div className='streamcontainer'>
               <div className='streamvideo'>
-                <iframe className="streammobile" title="streamplayer" src="https://player.twitch.tv/?channel=osnofaz&parent=afonsopereira.com" frameborder="0" allowFullScreen="true" scrolling="yes" height="500" width="900"></iframe>
+                <iframe className="streammobile" 
+                  title="streamplayer" 
+                  src="https://player.twitch.tv/?channel=osnofaz&parent=afonsopereira.com&parent=www.afonsopereira.com&parent=localhost"                  frameborder="0" 
+                  allowFullScreen="true" 
+                  scrolling="yes" 
+                  height="500" 
+                  width="900">
+                </iframe>
               </div>
             <div className='streamchat'>
               <iframe
               title="streamchatwindow"
               id="chat_embed"
-              src="https://www.twitch.tv/embed/osnofaz/chat?parent=afonsopereira.com"
+              src="https://www.twitch.tv/embed/osnofaz/chat?parent=afonsopereira.com&parent=www.afonsopereira.com&parent=localhost"
               height="500"
               width="350">
               </iframe>
