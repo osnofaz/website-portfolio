@@ -54,7 +54,7 @@ function Toggle() {
     window.addEventListener("scroll", scrollHandler);
 
     return (
-      <div className={darkMode}>
+      <div>
       <div className={navColour ? "containerswitch transparent" : "containerswitch"}>
       <span style={{ color: "var(--dark-lua)" }}>☽</span>
       <div className="switch-checkbox">

@@ -11,11 +11,8 @@ i18n.use (Backend).use(LanguageDetector).use(initReactI18next).init({
     debug: false,
     ns: ["common", "home", "aboutme", "resume", "projects", "stream", "contact"],
     interpolation: {
-        espaceValue: false,
+        escapeValue: false,
         formatSeparator: ",",
-    },
-    react:{
-        wait: true,
     }
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 import GlobalStyles from './components/styles/GlobalStyle';
 import Typography from './components/styles/Typography';
@@ -7,10 +7,11 @@ import Typography from './components/styles/Typography';
 import "./i18n";
 import "./index.css";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
     <>
     <GlobalStyles />
     <Typography />
     <App />
-    </>,
-     document.getElementById('root'));
+    </>
+);
