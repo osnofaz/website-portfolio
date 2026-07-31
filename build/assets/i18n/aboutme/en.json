@@ -1,6 +1,7 @@
 {
     "iam": "Hi, I am",
-    "education":"EDUCATION",
+    "skillset":"PROFESSIONAL SKILLSET",
+    "toolset":"TOOLS I USE",
     "degree":"Degree",
     "masters":"Masters",
     "certificate":"Certificate",
@@ -11,10 +12,13 @@
     "internship":"Graphic Designer",
     "internship2":"Punchline Lda. (Internship)",
     "stageactor":"Stage Actor",
-    "desc1":"I've been in the video game world since I was a kid, playing at a competitive level since the release of Call of Duty 2 and keeping the same passion. In addition to my taste for shooters, I played World of Warcraft since Burning Crusade where I reached the Cutting Edge achievement and also played League of Legends where I reached Diamond.",
-    "desc2":"Naturally, I ended up getting interested in computing where I followed the Multimedia course in the degree and Design and Multimedia in the master's (missing the dissertation to finish the same).",
-    "desc3":"At the conclusion of my academic career I ended up realizing the taste I had in being able to mold graphics/tools to my liking and decided to deepen my skills using programs like Unreal Engine to develop my own mini-game and be able to play it with my friends online.",
+    "subheading":"Frontend Developer at Vodafone",
+    "desc1":"I've spent the last few years working on the eShop team, mainly in Vue.js, with Java on the backend side. Day to day, that means working closely with designers, backend devs, and product managers to ship features that actually hold together end to end — I run on Scrum, so a lot of my work is about keeping a team's moving pieces coordinated, not just writing my own code in isolation.",
+    "desc2":"Before landing in frontend dev, I spent a few years on the design side — as a Graphic Designer at HYPERCODE, building social content and branding for clients, and earlier at Punchline, helping build the visual identity for an e-learning platform. That background still shapes how I think about frontend work: I care about how something looks and feels to use, not just whether it functions.",
+    "desc3":"Outside of work, gaming has been a constant since I was a kid — I played Call of Duty competitively from the CoD2 days, raided in WoW since Burning Crusade (Cutting Edge achievement), and climbed to Diamond in League. It's part of where my competitive streak and my interest in systems and problem-solving both come from, and it's still where I unwind — sometimes streaming the process.",
+    "desc4":"On the academic side: I finished my Multimedia bachelor's in 2018 and I'm currently finishing a Design and Multimedia Master's (dissertation pending). When I get the chance, I like building small things with React, Next.js, and occasionally Unreal Engine — mostly just to keep making stuff for its own sake.",
     "conclude":"*Yet to conclude",
     "present":"Present",
-    "frontenddev":"Front-End Developer"
+    "frontenddev":"Front-End Developer",
+    "lang":"en"
 }

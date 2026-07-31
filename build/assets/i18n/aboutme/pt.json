@@ -1,6 +1,7 @@
 {
-    "iam": "Olá, eu sou o",
-    "education":"FORMAÇÃO",
+    "iam": "Olá, sou o",
+    "skillset":"PROFESSIONAL SKILLSET",
+    "toolset":"FERRAMENTAS QUE USO",
     "degree":"LICENCIATURA",
     "masters":"MESTRADO",
     "certificate":"CERTIFICADO",
@@ -11,10 +12,13 @@
     "internship":"Designer Gráfico",
     "internship2":"Punchline Lda. (Estagiário)",
     "stageactor":"Actor",
-    "desc1":"Estou no mundo dos videojogos desde criança, jogando a um nível competitivo desde o lançamento do Call of Duty 2 e mantenho a mesma paixão. Além do meu gosto por shooters, joguei World of Warcraft desde o Burning Crusade onde cheguei a atingir o achivement Cutting Edge e  joguei também League of Legends onde cheguei a Diamond.",
-    "desc2":"Naturalmente, acabei por me interessar por informática onde segui o curso de Multimédia na licenciatura e Design e Multimédia no mestrado (faltando a dissertação para terminar o mesmo).",
-    "desc3":"Na conclusão do meu percurso académico acabei por perceber o gosto que tinha em conseguir moldar grafismo/ferramentas ao meu gosto e decidi aprofundar mais as minhas capacidades usando programas como o Unreal Engine para desenvolver o meu próprio mini-jogo e ser capaz de o jogar com os meus amigos online.",
+    "subheading":"Frontend Developer na Vodafone",
+    "desc1":"Trabalho na equipa do eShop, principalmente em Vue.js, com Java do lado do backend. No dia a dia, isso significa trabalhar de perto com designers, developers de backend e product managers para lançar funcionalidades que realmente funcionam de ponta a ponta — trabalho em Scrum, por isso grande parte do meu trabalho passa por coordenar as peças em movimento de uma equipa, e não apenas escrever código isoladamente.",
+    "desc2":"Antes de me dedicar ao frontend, passei alguns anos do lado do design — como Graphic Designer na HYPERCODE, a criar conteúdo para redes sociais e branding para clientes, e antes disso na Punchline, a ajudar a construir a identidade visual de uma plataforma de e-learning. Essa experiência continua a influenciar a forma como penso o trabalho de frontend: preocupo-me com o aspeto e a experiência de utilização, não só com a funcionalidade.",
+    "desc3":"Fora do trabalho, os videojogos têm sido uma constante desde criança — joguei Call of Duty a nível competitivo desde os tempos do CoD2, fiz raids em WoW desde o Burning Crusade (conquistei Cutting Edge) e cheguei a Diamond em League of Legends. É parte de onde vem o meu espírito competitivo e o meu interesse por sistemas e resolução de problemas, e continua a ser onde relaxo — por vezes fazendo stream do processo.",
+    "desc4":"No plano académico: terminei a licenciatura em Multimédia em 2018 e estou atualmente a terminar um Mestrado em Design e Multimédia (falta a dissertação). Quando tenho oportunidade, gosto de construir pequenas coisas com React, Next.js e, ocasionalmente, Unreal Engine — sobretudo só por gosto de continuar a criar.",
     "conclude":"*Por concluir",
     "present":"Presente",
-    "frontenddev":"Front-End Developer"
+    "frontenddev":"Front-End Developer",
+    "lang":"pt"
 }

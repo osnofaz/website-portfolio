@@ -1,5 +1,5 @@
 {
-    "iama": "EU SOU",
+    "iama": "SOU",
     "aboutme":"SOBRE MIM",
     "showreel":"VER SHOWREEL",
     "graphicdesigner":"DESIGNER GRÁFICO",
@@ -7,9 +7,9 @@
     "subheading":"O que posso fazer por si",
     "services": "SERVIÇOS",
     "graphicdesign":"design gráfico",
-    "graphicdesigndesc":"Crio conteúdos para redes sociais tais como posts para o Instagram, reels e Stories.",
-    "webdesigndesc":"Faço design UI/UX para websites que precisam de um novo look mais moderno e simples.",
-    "webdevdesc":"Também desenvolvo websites com características específicas para cada cliente, por exemplo o backend.",
+    "graphicdesigndesc":"Conteúdos para redes sociais tais como posts para o Instagram, reels e Stories.",
+    "webdesigndesc":"Design de UI/UX para websites que precisam de um novo look mais moderno e simples.",
+    "webdevdesc":"Websites com características específicas para cada cliente, por exemplo o backend.",
     "subheadingcards":"Alguns dos meus trabalhos mais recentes",
     "projects":"PROJETOS",
     "socialmediatitle": "Posts para Redes Sociais",
@@ -21,5 +21,6 @@
     "standsdesc": "Elaboração de stands para feiras internacionais.",
     "webpagebannertitle": "Banner para Página Web",
     "webpagebannerdesc": "Produção de imagens/videos que constituem o inicio de uma página web.",
-    "projectnameholder":"Nome do Projeto"
+    "projectnameholder":"Nome do Projeto",
+    "contactme": "CONTACTA-ME"
 }

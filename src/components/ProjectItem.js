@@ -35,8 +35,14 @@ export default function ProjectItem(
 			>
 				<Contenido >
         <div className="projectItem__img">
-        <a onClick="window.open(this.href,this.target);return false;" href={url} target="/"><img border="0" src={img2} alt="" /></a>
-      </div>
+          {url !== "#!" ? (
+            <a href={url} target="_blank" rel="noreferrer">
+              <img border="0" src={img2} alt={t(title)} />
+            </a>
+          ) : (
+            <img border="0" src={img2} alt={t(title)} />
+          )}      
+        </div>
 					<p>{t(desc)}</p>
           <p>{t(desc2)}</p>
           <br/>
@@ -45,7 +51,7 @@ export default function ProjectItem(
 				</Contenido>
 			</Modal>
       <div className="projectItem__img">
-        <img src={img} alt="project img" />
+        <img src={img} alt={t(title)} />
       </div>
       <div className="projectItem__info">          
           <h3 className="projectItem__title">{t(title)}</h3>

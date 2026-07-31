@@ -184,7 +184,7 @@ function About() {
             </div>
 
             <div className="right">
-              <img src={AboutImg} alt="me"/>
+              <img src={AboutImg} alt="Afonso Pereira"/>
             </div>
           </div>
 
