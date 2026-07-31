@@ -757,14 +757,16 @@ video {
 
 .botaofechar {
   position: absolute;
-  right: -35px;
+  top: 20px;
+  right: 15px;
   width: 30px;
   height: 30px;
   border: none;
-  background:none;
+  background: none;
   cursor: pointer;
-  transition: all 0.3s ease-out; 
- }
+  transition: all 0.3s ease-out;
+  z-index: 1;
+}
  
  .botaofechar:hover {
    background-color: var(--dark-background);

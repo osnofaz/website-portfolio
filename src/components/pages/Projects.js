@@ -24,14 +24,14 @@ const ProjectStyle = styled.div`
   }
   .projects__searchBar {
     position: relative;
-    width: 100%;
-    margin-top: 5rem;
+    width: 60%;
+    margin: 5rem auto 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
   .projects__searchBar input {
     width: 100%;
     font-size: 30px;
-    padding: 0.8rem;
+    padding: 0.6rem;
     color: var(--black);
     border-radius: 6px;
     outline: none;

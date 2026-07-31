@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Modal = ({
@@ -11,12 +11,24 @@ const Modal = ({
 	posicionModal,
 	padding
 }) => {
+	useEffect(() => {
+		if (estado) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+
+		return () => {
+			document.body.style.overflow = '';
+		};
+	}, [estado]);
+
 	return (
 		<>
 			{estado && 
 				<Overlay mostrarOverlay={mostrarOverlay} posicionModal={posicionModal}>
 					<ContenedorModal padding={padding}>
-												
+										
 					<button onClick={() => cambiarEstado(false)} className="botaofechar">
 						<i className="fas fa-times"></i>
 						</button>
