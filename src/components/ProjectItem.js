@@ -86,11 +86,11 @@ const Contenido = styled.div`
 	}
   @media only screen and (max-width: 768px) {
   p {
-		font-size:  8px;
+		font-size:  16px;
     width: 100%;
 	}
   h1 {
-		font-size: 15px;
+		font-size: 20px;
 		font-weight: 700;
 		margin-bottom: 10px;
 	}

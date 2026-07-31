@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation } from 'swiper';
+import { Navigation } from 'swiper/modules';
 import ProjectItem from './ProjectItem';
 import SectionTitle from './SectionTitle';
-import 'swiper/css/bundle';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import projects from './assets/data/projects';
-
-
-
-// install Swiper modules
-SwiperCore.use([Navigation]);
 
 const ProjectSectionStyle = styled.div`
   padding: 10rem 0;
@@ -60,26 +56,23 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectsSection() {
-  // console.log(projects);
   return (
     <ProjectSectionStyle>
       <div className="container">
         <SectionTitle subheading="Some of my recent works" heading="PROJECTS" />
         <div className="projects__allItems">
           <Swiper
+            modules={[Navigation]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
             breakpoints={{
-              // when window width is >= 640px
               640: {
                 slidesPerView: 1,
               },
-              // when window width is >= 768px
               768: {
                 slidesPerView: 2,
               },
-              // when window width is >= 1200px
               1200: {
                 slidesPerView: 3,
               },

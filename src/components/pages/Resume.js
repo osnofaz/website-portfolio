@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
 import pdf from "../assets/files/AfonsoPereiraCV.pdf";
 import Footer from '../Footer';
 import Particle from "../Particle";
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -27,7 +30,7 @@ function ResumeNew() {
 
         <Row className="resume">
         <Document file={pdf} className="d-flex justify-content-center">
-          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.7}  />
+          <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.7} />
         </Document>
         </Row>
 
