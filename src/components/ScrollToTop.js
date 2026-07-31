@@ -34,13 +34,13 @@ function ScrollToTop() {
 
   return (
     <Div>
-      <a
+      <button
         href="#"
         className={`${visible ? "block" : "none"}`}
         onClick={scrollToTop}
       >
         <AiOutlineUp />
-      </a>
+      </button>
     </Div>
   );
 }
@@ -51,12 +51,14 @@ const Div = styled.div`
     opacity: 0;
     visibility: hidden;
   }
-  a {
+  button {
     position: fixed;
     bottom: 40px;
     right: 40px;
     background-color: var(--dark-text);
     padding: 1rem;
+    border: none;
+    cursor: pointer;
     border-radius: 100%;
     display: flex;
     justify-content: center;
