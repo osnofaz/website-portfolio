@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router';
 import './App.css';
 import Navbar from "./components/Navbar";
 import About from './components/pages/About';
@@ -17,7 +17,7 @@ function App() {
     keepTheme();
 })
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router>
       <Suspense fallback={null}> 
       <Navbar />      
           <Routes>
