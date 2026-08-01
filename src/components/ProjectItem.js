@@ -37,10 +37,10 @@ export default function ProjectItem(
         <div className="projectItem__img">
           {url !== "#!" ? (
             <a href={url} target="_blank" rel="noreferrer">
-              <img border="0" src={img2} alt={t(title)} />
+              <img border="0" src={img2} alt={t(title)} loading="lazy"/>
             </a>
           ) : (
-            <img border="0" src={img2} alt={t(title)} />
+            <img border="0" src={img2} alt={t(title)} loading="lazy" />
           )}      
         </div>
 					<p>{t(desc)}</p>
@@ -51,7 +51,7 @@ export default function ProjectItem(
 				</Contenido>
 			</Modal>
       <div className="projectItem__img">
-        <img src={img} alt={t(title)} />
+        <img src={img} alt={t(title)} loading="lazy" />
       </div>
       <div className="projectItem__info">          
           <h3 className="projectItem__title">{t(title)}</h3>

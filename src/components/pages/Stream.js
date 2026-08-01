@@ -38,8 +38,9 @@ export default function Stream() {
               <div className='streamvideo'>
                 <iframe className="streammobile" 
                   title="streamplayer" 
-                  src="https://player.twitch.tv/?channel=osnofaz&parent=afonsopereira.com&parent=www.afonsopereira.com&parent=localhost"                  frameborder="0" 
-                  allowFullScreen="true" 
+                  src="https://player.twitch.tv/?channel=osnofaz&parent=afonsopereira.com&parent=www.afonsopereira.com&parent=localhost"
+                  frameBorder="0" 
+                  allowFullScreen
                   scrolling="yes" 
                   height="500" 
                   width="900">

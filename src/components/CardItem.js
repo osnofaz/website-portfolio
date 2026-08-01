@@ -11,6 +11,7 @@ function CardItem(props) {
               className='cards__item__img'
               alt='Travel Pic'
               src={props.src}
+              loading="lazy"
             />
           </figure>
           <div className='cards__item__info'>
