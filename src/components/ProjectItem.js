@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
 import Modal from './Modal';
 import './Modal.css';
-import ProjectImg from './assets/images/projectImg.png';
+import ProjectImg from './assets/images/projectImg.webp';
 
 
 

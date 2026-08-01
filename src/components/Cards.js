@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import SectionTitle from './SectionTitle';
 import styled from 'styled-components';
-import RejuvemedStandImg from './assets/images/Stand2.png';
+import RejuvemedStandImg from './assets/images/Stand2.webp';
 import PostNSImg from './assets/images/SocialMediaPosts.gif';
 import PostRaf from './assets/images/FacebookAds.gif';
 import StandACLImg from './assets/images/StandACL.jpeg';

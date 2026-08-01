@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 import WebpageBanner from '../images/BannerBoomBap.gif';
 import PostRaf from '../images/FacebookAds.gif';
 import RejuvemedStandImg from '../images/LojaRejuvemed.gif';
-import RejuvemedOutdoorImg from '../images/OutdoorRejuvemed.jpg';
-import PostRaf2 from '../images/PostRafPhil.png';
+import RejuvemedOutdoorImg from '../images/OutdoorRejuvemed.webp';
+import RejuvemedStandImg2 from '../images/Stand2.webp';
+import PostRaf2 from '../images/PostRafPhil.webp';
 import PostNSImg from '../images/SocialMediaPosts.gif';
-import RejuvemedStandImg2 from '../images/Stand2.png';
 import StandACLImg from '../images/StandACL.gif';
 import StandACLImg2 from '../images/StandACL.jpeg';
 
