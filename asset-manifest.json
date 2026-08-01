@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.f51a5f3d.css",
+    "main.css": "/static/css/main.e4465281.css",
     "main.js": "/static/js/main.b927aed7.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
@@ -15,11 +15,11 @@
     "static/media/AfonsoPereiraCV.pdf": "/static/media/AfonsoPereiraCV.329646df66a06d714477.pdf",
     "static/media/StandACL.jpeg": "/static/media/StandACL.852d3bf8b6a104b53b49.jpeg",
     "index.html": "/index.html",
-    "main.f51a5f3d.css.map": "/static/css/main.f51a5f3d.css.map",
+    "main.e4465281.css.map": "/static/css/main.e4465281.css.map",
     "main.b927aed7.js.map": "/static/js/main.b927aed7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f51a5f3d.css",
+    "static/css/main.e4465281.css",
     "static/js/main.b927aed7.js"
   ]
 }
