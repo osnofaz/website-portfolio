@@ -8,12 +8,6 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-row">
-        <div className="footer-copywright">
-          <h3>Designed by Afonso Pereira</h3>
-        </div>
-        <div className="footer-copywright">
-          <h3>Copyright © {year} osnofaz</h3>
-        </div>
         <div className="footer-body">
           <ul style={{ listStyleType: "none", padding: "0", display: "flex", justifyContent: "center", gap: "20px" }} className="footer-icons">
             <li className="social-icons">
@@ -57,6 +51,9 @@ function Footer() {
               </a>
             </li>
           </ul>
+        </div>
+        <div className="footer-copywright">
+          <h5>Copyright © {year} osnofaz</h5>
         </div>
       </div>
     </div>

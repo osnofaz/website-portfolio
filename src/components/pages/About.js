@@ -167,7 +167,7 @@ function About() {
           <div className="top-section">
             <div className="left">
               <p className="about__subheading">
-                {t("iam")}<span className="about__span"><span>Afonso Pereira</span></span>
+                {t("iam")}<span className="about__span">Afonso Pereira</span>
               </p>
               <h2 className="about__heading">{t("subheading")}</h2>
               <div className="about__info">
