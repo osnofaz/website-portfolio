@@ -12,15 +12,18 @@ const Modal = ({
 	padding
 }) => {
 	useEffect(() => {
-		if (estado) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = '';
-		}
+	if (estado) {
+		document.body.style.overflow = 'hidden';
+		document.body.classList.add('modal-open');
+	} else {
+		document.body.style.overflow = '';
+		document.body.classList.remove('modal-open');
+	}
 
-		return () => {
-			document.body.style.overflow = '';
-		};
+	return () => {
+		document.body.style.overflow = '';
+		document.body.classList.remove('modal-open');
+	};
 	}, [estado]);
 
 	return (

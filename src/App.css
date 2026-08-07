@@ -366,6 +366,10 @@ body {
   flex-direction: column;
 }
 
+body.modal-open .scrollToTop {
+  display: none !important;
+}
+
 button {
   font-family: 'Poppins';
 }

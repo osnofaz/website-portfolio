@@ -36,9 +36,9 @@ function ScrollToTop() {
     <Div>
       <button
         href="#"
-        className={`${visible ? "block" : "none"}`}
+        className={`scrollToTop ${visible ? "block" : "none"}`}
         onClick={scrollToTop}
-      >
+        >
         <AiOutlineUp />
       </button>
     </Div>
