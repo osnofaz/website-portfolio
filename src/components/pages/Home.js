@@ -23,7 +23,7 @@ function Home() {
     
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' playsInline autoPlay loop muted />
-      <h1 style={{ zIndex: "1"}}>AFONSO "OSNOFAZ" PEREIRA</h1>
+      <h1 style={{ zIndex: "1"}}>AFONSO PEREIRA</h1>
         <div className="i-title">
         <p>{t("iama")}</p>
           <div className="i-title-wrapper">
@@ -31,7 +31,6 @@ function Home() {
             <div className="i-title-item">{t("uiuxdesigner")}</div>
             <div className="i-title-item">{t("graphicdesigner")}</div>
             <div className="i-title-item">STREAMER</div>
-            <div className="i-title-item">GAMER</div>
           </div>
         </div>
       <div className='hero-btns'>
