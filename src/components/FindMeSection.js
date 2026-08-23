@@ -8,6 +8,7 @@ import { FaLinkedinIn, FaTwitch } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 import styled from 'styled-components';
 import FindMeTitle from './FindMeTitle';
+import useReveal from './hooks/useReveal';
 
 
 const FindMeStyles = styled.div`
@@ -30,12 +31,13 @@ const FindMeStyles = styled.div`
 
 export default function FindMeSection() {
   const {t} = useTranslation(['home']);
+  const [linksRef, linksVisible] = useReveal();
   return (
     <FindMeStyles>
       <div className='cards'>
       <div className="container">
         <FindMeTitle subheading={t("contactme")} heading="" />
-        <div className="connectme__allItems">
+        <div className={`connectme__allItems reveal ${linksVisible ? 'reveal--visible' : ''}`} ref={linksRef}>
         <ul className="home-about-social-links">
         <Tilt>
               <li className="social-icons">

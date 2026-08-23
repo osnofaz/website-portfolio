@@ -8,6 +8,7 @@ import ContactInfoItem from '../ContactInfoItem';
 import ContactSuccess from '../ContactSuccess';
 import Footer from '../Footer';
 import SectionTitle from '../SectionTitle';
+import useReveal from '../hooks/useReveal';
 
 
 
@@ -67,6 +68,8 @@ const ContactSectionStyle = styled.div`
 export default function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const {t} = useTranslation(['contact']);
+  const [leftRef, leftVisible] = useReveal();
+  const [rightRef, rightVisible] = useReveal();
   function submitForm() {
     setIsSubmitted(true);
   }
@@ -76,12 +79,12 @@ export default function ContactSection() {
           <div className="container" style={{ marginBottom: "50px" }}>
               <SectionTitle heading={t("contacttitle")} subheading={t("geintouch")}/>
               <div className="contactSection__wrapper">
-                  <div className="left">
+                  <div className={`left reveal ${leftVisible ? 'reveal--visible' : ''}`} ref={leftRef}>
                       <ContactInfoItem icon={<MdEmail />} text="info@afonsopereira.com" />
                       <ContactInfoItem icon={<FaDiscord />} text="Osnofaz#6047" />
                       <ContactInfoItem text="Abrantes, Portugal" />
                   </div>
-                  <div className="right">
+                  <div className={`right reveal ${rightVisible ? 'reveal--visible' : ''}`} ref={rightRef}>
                       {!isSubmitted ? (
           <ContactForm submitForm={submitForm} />
         ) : (

@@ -6,11 +6,13 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import pdf from "../assets/files/AfonsoPereiraCV.pdf";
 import Footer from '../Footer';
+import useReveal from '../hooks/useReveal';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [pdfRef, pdfVisible] = useReveal();
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -26,7 +28,7 @@ function ResumeNew() {
         </div>
         </Row>
 
-        <Row className="resume">
+        <Row className={`resume reveal ${pdfVisible ? 'reveal--visible' : ''}`} ref={pdfRef}>
         <Document file={pdf} className="d-flex justify-content-center">
           <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.7} />
         </Document>

@@ -11,7 +11,7 @@ Personal portfolio site built with React, showcasing my work as a Frontend Devel
 <h2>Features</h2>
 
 - <b>Bilingual</b> — English and Portuguese, via <code>react-i18next</code>
-- <b>Dark theme</b> with a particle background (<code>@tsparticles</code>)
+- <b>Light &amp; dark theme</b> toggle, fully theme-aware color system
 - <b>Project showcase</b> with a swiper carousel and filterable search
 - <b>Downloadable CV</b>, rendered in-page via <code>react-pdf</code>
 - <b>Live Twitch embed</b> for stream status
@@ -20,7 +20,7 @@ Personal portfolio site built with React, showcasing my work as a Frontend Devel
 <h2>Tech Stack</h2>
 
 - <b>React 18</b>
-- <b>React Router v6</b>
+- <b>React Router v7</b>
 - <b>styled-components</b>
 - <b>react-i18next</b> (i18n)
 - <b>react-bootstrap</b>

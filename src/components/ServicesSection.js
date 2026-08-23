@@ -4,6 +4,7 @@ import { MdCode, MdDesignServices, MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import SectionTitle from './SectionTitle';
 import ServicesSectionItem from './ServicesSectionItem';
+import useReveal from './hooks/useReveal';
 
 const ServicesItemsStyles = styled.div`
   .services__allItems {
@@ -25,12 +26,13 @@ const ServicesItemsStyles = styled.div`
 
 export default function ServicesSection() {
   const {t} = useTranslation(['home']);
+  const [itemsRef, itemsVisible] = useReveal();
   return (
     <ServicesItemsStyles>
       <div className='cards'>
       <div className="container">
         <SectionTitle subheading="" heading={t('services')} />
-        <div className="services__allItems">
+        <div className={`services__allItems reveal ${itemsVisible ? 'reveal--visible' : ''}`} ref={itemsRef}>
         <ServicesSectionItem
             icon={<MdDesignServices />}
             title={t('graphicdesign')}

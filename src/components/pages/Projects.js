@@ -7,6 +7,7 @@ import ProjectsInfo from '../assets/data/projects';
 import Footer from '../Footer';
 import ProjectItem from '../ProjectItem';
 import SectionTitle from '../SectionTitle';
+import useReveal from '../hooks/useReveal';
 
 
 const ProjectStyle = styled.div`
@@ -58,6 +59,8 @@ const ProjectStyle = styled.div`
 
 export default function Projects() { const [searchText, setSearchText] = useState('');
 const {t} = useTranslation(['home']);
+const [searchRef, searchVisible] = useReveal();
+const [gridRef, gridVisible] = useReveal(0.05);
 
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
   useEffect(() => {
@@ -84,7 +87,7 @@ const {t} = useTranslation(['home']);
             heading={t('projects')}
             subheading={t('subheadingcards')}
           />
-          <div className="projects__searchBar">
+          <div className={`projects__searchBar reveal ${searchVisible ? 'reveal--visible' : ''}`} ref={searchRef}>
             <form>
               <input
                 type="text"
@@ -95,7 +98,7 @@ const {t} = useTranslation(['home']);
               <MdSearch className="searchIcon" />
             </form>
           </div>
-          <div className="projects__allItems">
+          <div className={`projects__allItems reveal ${gridVisible ? 'reveal--visible' : ''}`} ref={gridRef}>
             {projectsData.map((item) => (
               <ProjectItem
                 key={item.id}

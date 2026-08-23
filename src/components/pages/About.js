@@ -5,6 +5,7 @@ import AboutImg from '../assets/images/afonsopereiraheadshot2026.png';
 import Footer from '../Footer';
 import Techstack from '../Techstack';
 import Toolstack from '../Toolstack';
+import useReveal from '../hooks/useReveal';
 
 
 const AboutPageStyles = styled.div`
@@ -157,13 +158,16 @@ const AboutPageStyles = styled.div`
 
 function About() {
   const {t} = useTranslation(['aboutme']);
+  const [textRef, textVisible] = useReveal();
+  const [imgRef, imgVisible] = useReveal();
+  const [skillsRef, skillsVisible] = useReveal();
 
     return (
       <>
         <AboutPageStyles>
         <div className="container">
           <div className="top-section">
-            <div className="left">
+            <div className={`left reveal ${textVisible ? 'reveal--visible' : ''}`} ref={textRef}>
               <p className="about__subheading">
                 {t("iam")}<span className="about__span">Afonso Pereira</span>
               </p>
@@ -181,12 +185,12 @@ function About() {
               </div>
             </div>
 
-            <div className="right">
+            <div className={`right reveal ${imgVisible ? 'reveal--visible' : ''}`} ref={imgRef}>
               <img src={AboutImg} alt="Afonso Pereira" loading="lazy"/>
             </div>
           </div>
 
-          <div className="about__info__items" >
+          <div className={`about__info__items reveal ${skillsVisible ? 'reveal--visible' : ''}`} ref={skillsRef}>
             <div className="about__info__item" >
               <h1 className="about__info__heading">{t("skillset")}</h1>
               <Techstack />

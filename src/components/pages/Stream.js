@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import '../../App.css';
 import Footer from '../Footer';
 import SectionTitle from '../SectionTitle';
+import useReveal from '../hooks/useReveal';
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -23,6 +24,7 @@ const ProjectStyle = styled.div`
 
 export default function Stream() {
   const {t} = useTranslation(['stream']);
+  const [streamRef, streamVisible] = useReveal();
 
     return (
         <>
@@ -32,7 +34,7 @@ export default function Stream() {
               heading="STREAM"
               subheading={t("streamdesc")}
             />
-            <div className='streamcontainer'>
+            <div className={`streamcontainer reveal ${streamVisible ? 'reveal--visible' : ''}`} ref={streamRef}>
               <div className='streamvideo'>
                 <iframe className="streammobile" 
                   title="streamplayer" 
