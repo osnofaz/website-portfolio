@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.45505b9d.css",
-    "main.js": "/static/js/main.b819f31c.js",
+    "main.css": "/static/css/main.9559a131.css",
+    "main.js": "/static/js/main.55cd1460.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
     "static/media/SocialMediaPosts.gif": "/static/media/SocialMediaPosts.3c0521b71c3e97ec7bc3.gif",
     "static/media/BannerBoomBap.gif": "/static/media/BannerBoomBap.cee3e3b509831a757772.gif",
+    "static/media/afonsopereiraheadshot2026.png": "/static/media/afonsopereiraheadshot2026.3ec348540b00196c6cc7.png",
     "static/media/StandACL.gif": "/static/media/StandACL.d36c3504307428563c57.gif",
-    "static/media/about-page-img.jpg": "/static/media/about-page-img.e5eec0796457f81b6523.jpg",
     "static/media/Stand2.webp": "/static/media/Stand2.131280554c72c9f24cff.webp",
     "static/media/AfonsoPereiraCV.pdf": "/static/media/AfonsoPereiraCV.329646df66a06d714477.pdf",
     "static/media/OutdoorRejuvemed.webp": "/static/media/OutdoorRejuvemed.60d98d9f9392a23edbb5.webp",
@@ -15,11 +15,11 @@
     "static/media/PostRafPhil.webp": "/static/media/PostRafPhil.2bc59070c5c781d6afbf.webp",
     "static/media/projectImg.webp": "/static/media/projectImg.2bc59070c5c781d6afbf.webp",
     "index.html": "/index.html",
-    "main.45505b9d.css.map": "/static/css/main.45505b9d.css.map",
-    "main.b819f31c.js.map": "/static/js/main.b819f31c.js.map"
+    "main.9559a131.css.map": "/static/css/main.9559a131.css.map",
+    "main.55cd1460.js.map": "/static/js/main.55cd1460.js.map"
   },
   "entrypoints": [
-    "static/css/main.45505b9d.css",
-    "static/js/main.b819f31c.js"
+    "static/css/main.9559a131.css",
+    "static/js/main.55cd1460.js"
   ]
 }
