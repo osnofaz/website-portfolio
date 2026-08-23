@@ -309,7 +309,7 @@ input:checked + .slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 1rem;
+  padding: 0.3rem 1rem;
   transition: 0.4s ease-in-out;
 }
 
