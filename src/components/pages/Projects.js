@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import '../../App.css';
 import ProjectsInfo from '../assets/data/projects';
 import Footer from '../Footer';
-import Particle from "../Particle";
 import ProjectItem from '../ProjectItem';
 import SectionTitle from '../SectionTitle';
 
@@ -26,11 +25,12 @@ const ProjectStyle = styled.div`
     position: relative;
     width: 60%;
     margin: 5rem auto 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
   }
   .projects__searchBar input {
     width: 100%;
-    font-size: 30px;
+    font-size: var(--fs-lg);
     padding: 0.6rem;
     color: var(--black);
     border-radius: 6px;
@@ -78,7 +78,6 @@ const {t} = useTranslation(['home']);
 
   return (
     <>
-      <Particle />
       <ProjectStyle>
         <div className="container">
           <SectionTitle

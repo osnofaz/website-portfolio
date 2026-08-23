@@ -1,9 +1,8 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
-import AboutImg from '../assets/images/about-page-img.jpg';
+import AboutImg from '../assets/images/afonsopereiraheadshot2026.png';
 import Footer from '../Footer';
-import Particle from '../Particle';
 import Techstack from '../Techstack';
 import Toolstack from '../Toolstack';
 
@@ -28,7 +27,7 @@ const AboutPageStyles = styled.div`
     flex: 2;
   }
   .about__subheading {
-    font-size: 2.2rem;
+    font-size: var(--fs-lg);
     display: flex;
     align-items: center;
     span {
@@ -42,10 +41,10 @@ const AboutPageStyles = styled.div`
     margin-left: 0.6rem;
     color: var(--dark-background);
     font-weight: bold;
-    font-size: 3rem;
+    font-size: var(--fs-xl);
   }
   .about__heading {
-    font-size: 2.6rem;
+    font-size: var(--fs-lg);
     margin-bottom: 3rem;
     line-height: 3rem;
     margin-top: 0.6rem;
@@ -58,7 +57,7 @@ const AboutPageStyles = styled.div`
   }
   .right {
     img {
-      border: 2px solid var(--gray-1);
+      border: 1px solid var(--border-subtle);
     }
   }
   .about__info__items {
@@ -66,7 +65,7 @@ const AboutPageStyles = styled.div`
   }
   
   .about__info__heading {
-    font-size: 3.6rem;
+    font-size: var(--fs-xl);
     text-transform: uppercase;
     margin-bottom: 4rem;
   }
@@ -144,7 +143,7 @@ const AboutPageStyles = styled.div`
    }
   .aboutmetext{
     margin: 0 auto;
-    font-size: 18px;
+    font-size: var(--fs-base);
     line-height: 1.3em;
       @media only screen and (max-width: 768px) {
         font-size: 1.2rem;
@@ -161,7 +160,6 @@ function About() {
 
     return (
       <>
-        <Particle />
         <AboutPageStyles>
         <div className="container">
           <div className="top-section">

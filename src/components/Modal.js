@@ -74,7 +74,7 @@ const ContenedorModal = styled.div`
 	position: relative;
 	border-radius: 5px;
 	background-color: var(--dark-background);
-	box-shadow: rgba(100,100,111, 0.2) 0px 7px 29px 0px;
+	border: 1px solid var(--border-subtle);
 	padding: ${props => props.padding ? props.padding : '20px'};
 `;
 
@@ -84,9 +84,9 @@ const EncabezadoModal = styled.div`
 	justify-content: space-between;
 	margin-bottom: 20px;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #E8E8E8;
+	border-bottom: 1px solid var(--border-subtle);
 	h3 {
-		font-size: 42px;
+		font-size: var(--fs-xl);
 		font-weight: 700;
 	}
 	@media only screen and (max-width: 768px) {

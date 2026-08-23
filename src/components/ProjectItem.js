@@ -108,7 +108,7 @@ const ProjectItemStyles = styled.div`
     border-radius: 12px;
     overflow: hidden;
     display: inline-block;
-    border: 3px solid var(--gray-2);
+    border: 1px solid var(--border-subtle);
     margin-bottom: 20px;
     img {
       height: 100%;
@@ -122,17 +122,17 @@ const ProjectItemStyles = styled.div`
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-subtle);
     
     .btn {
       margin-top: auto;
     }
   }
   .projectItem__title {
-    font-size: 2.2rem;
+    font-size: var(--fs-lg);
   }
   .projectItem__desc {
-    font-size: 1.2rem;
+    font-size: var(--fs-base);
     margin-top: 1rem;
   }
   @media only screen and (max-width: 768px) {

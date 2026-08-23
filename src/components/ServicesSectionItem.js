@@ -11,7 +11,7 @@ const ItemStyles = styled.div`
     }
   }
   .servicesItem__title {
-    font-size: 2.5rem;
+    font-size: var(--fs-xl);
   }
   
   .para {

@@ -4,21 +4,10 @@ import styled from 'styled-components';
 const SectionTitleStyle = styled.div`
   text-align: center;
   p {
-    margin-top: -60px;
-     font-size: 25px;
+    font-size: var(--fs-md);
   }
   h2 {
-    font-size: 120px;
-    margin-top: 0.5rem;
-}
-  @media only screen and (max-width: 768px) {
-    text-align: center;
-    p {
-      font-size: 1.2rem;
-    }
-    h2 {
-      font-size: 3.6rem;
-    }
+    font-size: var(--fs-display);
   }
 `;
 

@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
 import '../../App.css';
 import Footer from '../Footer';
-import Particle from '../Particle';
 import SectionTitle from '../SectionTitle';
 
 const ProjectStyle = styled.div`
@@ -27,7 +26,6 @@ export default function Stream() {
 
     return (
         <>
-        <Particle />
           <ProjectStyle>
           <div className="container" style={{ marginBottom: "55px" }}>
             <SectionTitle

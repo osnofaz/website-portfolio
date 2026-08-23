@@ -7,15 +7,18 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
   :root{
-    --dark-bg: #262626;
-    --gray-1: #BCB4B4;
     --deep-dark: #1E1E1E;
-    --gray-2: #363636;
     --white : white;
     --black: black;
+    --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+    --fs-sm: clamp(0.875rem, 0.83rem + 0.25vw, 1rem);
+    --fs-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    --fs-md: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+    --fs-lg: clamp(1.75rem, 1.4rem + 1.75vw, 2.25rem);
+    --fs-xl: clamp(2.5rem, 1.8rem + 3.5vw, 3.5rem);
   }
   html{
-   background-color: var(--dark-bg);
+   background-color: var(--dark-background);
   }
 
   ul,li{

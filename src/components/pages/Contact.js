@@ -7,7 +7,6 @@ import ContactForm from '../ContactForm';
 import ContactInfoItem from '../ContactInfoItem';
 import ContactSuccess from '../ContactSuccess';
 import Footer from '../Footer';
-import Particle from '../Particle';
 import SectionTitle from '../SectionTitle';
 
 
@@ -29,7 +28,7 @@ const ContactSectionStyle = styled.div`
     content: '';
     width: 2px;
     height: 50%;
-    background-color: var(--gray-1);
+    background-color: var(--border-subtle);
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
@@ -73,7 +72,6 @@ export default function ContactSection() {
   }
   return (
     <>
-    <Particle />
     <ContactSectionStyle>
           <div className="container" style={{ marginBottom: "50px" }}>
               <SectionTitle heading={t("contacttitle")} subheading={t("geintouch")}/>

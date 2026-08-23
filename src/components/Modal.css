@@ -80,6 +80,7 @@
 
 .modal__description{
   margin-bottom: 1.5rem;
+  margin-top: auto;
 }
 
 .modal__button-width{

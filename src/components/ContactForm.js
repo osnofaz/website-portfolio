@@ -12,15 +12,15 @@ const FormStyle = styled.form`
     margin-bottom: 2rem;
   }
   label {
-    font-size: 23px;
+    font-size: var(--fs-md);
     font-weight: bold;
   }
   input,
   textarea {
     width: 100%;
-    font-size: 1.3rem;
+    font-size: var(--fs-md);
     padding: 10px;
-    color: var(--gray-1);
+    color: var(--dark-text);
     background-color: var(--dark-footer);
     outline: none;
     border: none;
@@ -34,7 +34,7 @@ const FormStyle = styled.form`
   button[type='submit'] {
     background-color: var(--dark-text);
     color: var(--dark-background);
-    font-size: 1.5rem;
+    font-size: var(--fs-md);
     display: inline-block;
     outline: none;
     border: none;
@@ -44,9 +44,13 @@ const FormStyle = styled.form`
     transition: 0.4s ease-in-out;
 
   }
+  button[type='submit']:hover {
+    background-color: var(--hover-accent);
+    color: var(--dark-background);
+  }
   .contactreqs{
     color: #bd2e2e;
-    font-size: 16px;
+    font-size: var(--fs-sm);
     font-weight: normal;
   }
 `;

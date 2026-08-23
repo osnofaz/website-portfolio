@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ColStyle = styled.div`
 
   .heading {
-    font-size: 25px;
+    font-size: var(--fs-md);
     margin-bottom: 1.5rem;
   }
   
@@ -13,7 +13,7 @@ const ColStyle = styled.div`
     margin-bottom: 1rem;
   }
   a {
-    font-size: 16px;
+    font-size: var(--fs-sm);
     color: var(--dark-text)
   }
 

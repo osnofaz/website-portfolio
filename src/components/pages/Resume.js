@@ -6,7 +6,6 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import pdf from "../assets/files/AfonsoPereiraCV.pdf";
 import Footer from '../Footer';
-import Particle from "../Particle";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -19,7 +18,6 @@ function ResumeNew() {
 
   return (
     <>
-     <Particle />
      <div style={{ marginBottom: "160px" }}>
       <Container fluid className="resume-section">
         <Row style={{ justifyContent: "center", position: "relative" }}>

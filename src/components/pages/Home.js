@@ -8,7 +8,6 @@ import '../Button.css';
 import FindMeSection from '../FindMeSection';
 import Footer from '../Footer';
 import Modal from '../Modal';
-import Particle from '../Particle';
 import ServicesSection from '../ServicesSection';
 
 
@@ -19,25 +18,22 @@ function Home() {
 
   return (
     <>
-    <Particle />
-    
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' playsInline autoPlay loop muted />
-      <h1 style={{ zIndex: "1"}}>AFONSO PEREIRA</h1>
-        <div className="i-title">
-        <p>{t("iama")}</p>
-          <div className="i-title-wrapper">
-            <div className="i-title-item">WEB DEVELOPER</div>
-            <div className="i-title-item">{t("uiuxdesigner")}</div>
-            <div className="i-title-item">{t("graphicdesigner")}</div>
-            <div className="i-title-item">STREAMER</div>
-          </div>
-        </div>
+      <div className="hero-content">
+        <p className="hero-eyebrow">{t("heroeyebrow")}</p>
+        <h1>Afonso Pereira</h1>
+        <p className="hero-role">{t("herorole")}</p>
+        <p className="hero-tagline">{t("herotagline")}</p>
+      </div>
       <div className='hero-btns'>
         <Link to="./about">
       <button className="btn btn--outline btn--large" > {t("aboutme")} </button>
       </Link>
       <button className="btn btn--primary btn--large" onClick={() => cambiarEstadoModal4(!estadoModal4)}> {t("showreel")} <i className="far fa-play-circle"></i></button>
+      </div>
+      <div className="scroll-cue">
+        <span></span>
       </div>
     </div>
       <Modal
