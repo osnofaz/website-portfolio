@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9559a131.css",
+    "main.css": "/static/css/main.0cf1bec0.css",
     "main.js": "/static/js/main.55cd1460.js",
     "static/media/FacebookAds.gif": "/static/media/FacebookAds.a628ec4d20f4da36fbfa.gif",
     "static/media/LojaRejuvemed.gif": "/static/media/LojaRejuvemed.61c76c414d274042d35e.gif",
@@ -15,11 +15,11 @@
     "static/media/PostRafPhil.webp": "/static/media/PostRafPhil.2bc59070c5c781d6afbf.webp",
     "static/media/projectImg.webp": "/static/media/projectImg.2bc59070c5c781d6afbf.webp",
     "index.html": "/index.html",
-    "main.9559a131.css.map": "/static/css/main.9559a131.css.map",
+    "main.0cf1bec0.css.map": "/static/css/main.0cf1bec0.css.map",
     "main.55cd1460.js.map": "/static/js/main.55cd1460.js.map"
   },
   "entrypoints": [
-    "static/css/main.9559a131.css",
+    "static/css/main.0cf1bec0.css",
     "static/js/main.55cd1460.js"
   ]
 }
