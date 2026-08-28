@@ -48,6 +48,19 @@ const FormStyle = styled.form`
     background-color: var(--hover-accent);
     color: var(--dark-background);
   }
+  button[type='submit']:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  button[type='submit']:disabled:hover {
+    background-color: var(--dark-text);
+    color: var(--dark-background);
+  }
+  .sendError {
+    color: #bd2e2e;
+    font-size: var(--fs-sm);
+    margin-top: 1rem;
+  }
   .contactreqs{
     color: #bd2e2e;
     font-size: var(--fs-sm);
@@ -58,7 +71,7 @@ const FormStyle = styled.form`
 const ContactForm = ({submitForm}) => {
   const form = useRef();
   const {t} = useTranslation(['contact']);
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors, isSubmitting, sendError } = useForm(
     submitForm,
     validate
   );
@@ -109,11 +122,15 @@ const ContactForm = ({submitForm}) => {
 
           </label>
         </div>
-        <button type="submit">{t("send")}</button>
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending…' : t("send")}
+        </button>
+        {sendError && (
+          <p className="sendError">Something went wrong sending your message — please try again, or email me directly.</p>
+        )}
       </FormStyle>
     </>
   );
 };
 
 export default ContactForm;
-

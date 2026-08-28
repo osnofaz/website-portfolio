@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
     <div className='hero-container'>
-      <video src='/videos/video-1.mp4' playsInline autoPlay loop muted />
+      <video className="hero-video" src='/videos/video-1.mp4' playsInline autoPlay loop muted />
       <div className="hero-content">
         <p className="hero-eyebrow">{t("heroeyebrow")}</p>
         <h1>Afonso Pereira</h1>

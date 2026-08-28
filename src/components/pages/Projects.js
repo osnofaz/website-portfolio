@@ -8,6 +8,7 @@ import Footer from '../Footer';
 import ProjectItem from '../ProjectItem';
 import SectionTitle from '../SectionTitle';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 
 const ProjectStyle = styled.div`
@@ -59,6 +60,7 @@ const ProjectStyle = styled.div`
 
 export default function Projects() { const [searchText, setSearchText] = useState('');
 const {t} = useTranslation(['home']);
+useDocumentMeta('Projects', "A showcase of graphic design and web projects by Afonso Pereira — social media campaigns, outdoor ads, storefronts, and more.");
 const [searchRef, searchVisible] = useReveal();
 const [gridRef, gridVisible] = useReveal(0.05);
 
@@ -107,6 +109,8 @@ const [gridRef, gridVisible] = useReveal(0.05);
                 desc2={item.desc2}
                 img={item.img}
                 img2={item.img2}
+                imgVideo={item.imgVideo}
+                img2Video={item.img2Video}
                 url={item.url}
                 tool1={item.tool1}
               />

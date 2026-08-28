@@ -9,6 +9,7 @@ import ContactSuccess from '../ContactSuccess';
 import Footer from '../Footer';
 import SectionTitle from '../SectionTitle';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 
 
@@ -68,6 +69,7 @@ const ContactSectionStyle = styled.div`
 export default function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const {t} = useTranslation(['contact']);
+  useDocumentMeta('Contact', "Get in touch with Afonso Pereira — email, Discord, or send a message directly.");
   const [leftRef, leftVisible] = useReveal();
   const [rightRef, rightVisible] = useReveal();
   function submitForm() {
@@ -80,9 +82,13 @@ export default function ContactSection() {
               <SectionTitle heading={t("contacttitle")} subheading={t("geintouch")}/>
               <div className="contactSection__wrapper">
                   <div className={`left reveal ${leftVisible ? 'reveal--visible' : ''}`} ref={leftRef}>
-                      <ContactInfoItem icon={<MdEmail />} text="info@afonsopereira.com" />
+                      <a href="mailto:info@afonsopereira.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ContactInfoItem icon={<MdEmail />} text="info@afonsopereira.com" />
+                      </a>
                       <ContactInfoItem icon={<FaDiscord />} text="Osnofaz#6047" />
-                      <ContactInfoItem text="Abrantes, Portugal" />
+                      <a href="https://maps.google.com/?q=Abrantes,Portugal" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <ContactInfoItem text="Abrantes, Portugal" />
+                      </a>
                   </div>
                   <div className={`right reveal ${rightVisible ? 'reveal--visible' : ''}`} ref={rightRef}>
                       {!isSubmitted ? (

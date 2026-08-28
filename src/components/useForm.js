@@ -11,42 +11,50 @@ const useForm = (callback, validate) => {
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   const handleChange = (e) => {
-    const { name, email, message, value } = e.target;
+    const { name, value } = e.target;
     setValues({
       ...values,
       [name]: value,
-      [email]:value,
-      [message]:value
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (isSubmitting) return;
+    setSendError(false);
     setErrors(validate(values));
     setIsSubmitting(true);
-    
   };
 
   // eslint-disable-next-line
   const memoizedCallback = useCallback(callback, []);
 
   useEffect(() => {
-    if (Object.keys(errors).length === 0 && isSubmitting) {
-      emailjs.send('service_w52syad', 'template_kqjsrcs', values, 'jz3fzMXNhPfdplahd')
-      .then((result) => {
-          console.log(result.text);
-      })
-      .catch((error) => {
-          console.log(error.text);
-      });
-      memoizedCallback();
-    }
-  }, [errors, memoizedCallback, isSubmitting, values]);
+    if (!isSubmitting) return;
 
-  return { handleChange, handleSubmit, values, errors };
+    if (Object.keys(errors).length > 0) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    emailjs.send('service_w52syad', 'template_kqjsrcs', values, 'jz3fzMXNhPfdplahd')
+    .then(() => {
+        memoizedCallback();
+    })
+    .catch((error) => {
+        console.log(error.text);
+        setSendError(true);
+    })
+    .finally(() => {
+        setIsSubmitting(false);
+    });
+    // eslint-disable-next-line
+  }, [errors]);
+
+  return { handleChange, handleSubmit, values, errors, isSubmitting, sendError };
 };
 
 export default useForm;

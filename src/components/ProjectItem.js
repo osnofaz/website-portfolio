@@ -11,6 +11,8 @@ export default function ProjectItem(
   {
   img = ProjectImg,
   img2 = ProjectImg,
+  imgVideo = false,
+  img2Video = false,
   title = 'Project Name',
   desc = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
   desc2 = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -35,7 +37,9 @@ export default function ProjectItem(
 			>
 				<Contenido >
         <div className="projectItem__img">
-          {url !== "#!" ? (
+          {img2Video ? (
+            <video src={img2} autoPlay loop muted playsInline />
+          ) : url !== "#!" ? (
             <a href={url} target="_blank" rel="noreferrer">
               <img border="0" src={img2} alt={t(title)} loading="lazy"/>
             </a>
@@ -51,7 +55,11 @@ export default function ProjectItem(
 				</Contenido>
 			</Modal>
       <div className="projectItem__img">
-        <img src={img} alt={t(title)} loading="lazy" />
+        {imgVideo ? (
+          <video src={img} autoPlay loop muted playsInline />
+        ) : (
+          <img src={img} alt={t(title)} loading="lazy" />
+        )}
       </div>
       <div className="projectItem__info">          
           <h3 className="projectItem__title">{t(title)}</h3>
@@ -71,26 +79,26 @@ const Contenido = styled.div`
 	align-items: center;
   
 	h1 {
-		font-size: 42px;
+		font-size: var(--fs-xl);
 		font-weight: 700;
 		margin-bottom: 10px;
 	}
 	p {
-		font-size: 18px;
+		font-size: var(--fs-base);
     width: 100%;
 	}
-	img {
+	img, video {
 		width: 100%;
 		vertical-align: top;
 		border-radius: 3px;
 	}
   @media only screen and (max-width: 768px) {
   p {
-		font-size:  16px;
+		font-size: var(--fs-sm);
     width: 100%;
 	}
   h1 {
-		font-size: 20px;
+		font-size: var(--fs-lg);
 		font-weight: 700;
 		margin-bottom: 10px;
 	}
@@ -110,8 +118,10 @@ const ProjectItemStyles = styled.div`
     display: inline-block;
     border: 1px solid var(--border-subtle);
     margin-bottom: 20px;
-    img {
+    img, video {
       height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
   }
   .projectItem__info {

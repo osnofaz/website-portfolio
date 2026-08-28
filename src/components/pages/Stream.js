@@ -5,6 +5,7 @@ import '../../App.css';
 import Footer from '../Footer';
 import SectionTitle from '../SectionTitle';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -24,6 +25,7 @@ const ProjectStyle = styled.div`
 
 export default function Stream() {
   const {t} = useTranslation(['stream']);
+  useDocumentMeta('Stream', "Watch Afonso Pereira (Osnofaz) stream live on Twitch — competitive gaming and dev streams.");
   const [streamRef, streamVisible] = useReveal();
 
     return (

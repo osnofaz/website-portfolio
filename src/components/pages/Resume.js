@@ -7,11 +7,13 @@ import 'react-pdf/dist/Page/TextLayer.css';
 import pdf from "../assets/files/AfonsoPereiraCV.pdf";
 import Footer from '../Footer';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  useDocumentMeta('Resume', "Download Afonso Pereira's CV — Frontend Developer experience, skills, and background.");
   const [pdfRef, pdfVisible] = useReveal();
 
   useEffect(() => {

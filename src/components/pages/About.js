@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
-import AboutImg from '../assets/images/afonsopereiraheadshot2026.png';
+import AboutImg from '../assets/images/afonsopereiraheadshot2026.webp';
 import Footer from '../Footer';
 import Techstack from '../Techstack';
 import Toolstack from '../Toolstack';
 import useReveal from '../hooks/useReveal';
+import useDocumentMeta from '../hooks/useDocumentMeta';
 
 
 const AboutPageStyles = styled.div`
@@ -158,6 +159,7 @@ const AboutPageStyles = styled.div`
 
 function About() {
   const {t} = useTranslation(['aboutme']);
+  useDocumentMeta('About', "Learn more about Afonso Pereira — Frontend Developer at Vodafone with a background in graphic design, UI/UX, and the story behind the Osnofaz alias.");
   const [textRef, textVisible] = useReveal();
   const [imgRef, imgVisible] = useReveal();
   const [skillsRef, skillsVisible] = useReveal();
