@@ -47,6 +47,7 @@
   z-index: 4;
   transition: 0.4s ease-in-out;
   width: -webkit-fill-available;
+  border-bottom: 1px solid transparent;
 }
 
 .sticky {
