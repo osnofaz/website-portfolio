@@ -99,6 +99,8 @@
 
 .nav-item {
   height: 65px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {

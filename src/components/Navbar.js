@@ -1,8 +1,8 @@
-import i18next from "i18next";
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router';
 import Toggle from './Toggle';
+import LanguageSwitcher from './LanguageSwitcher';
 
 
 function Navbar() {
@@ -15,13 +15,10 @@ function Navbar() {
     const {i18n, t} = useTranslation(["common"]);
     useEffect(() => {
         if (localStorage.getItem("i18nextLng")?.length > 2){
-            i18next.changeLanguage("en");
+            i18n.changeLanguage("en");
         }
     });
 
-    const handleLanguageChange = (e) => {
-        i18n.changeLanguage(e.target.value);
-    }
         function scrollHandler() {
             if (window.scrollY >= 20) {
               updateNavbar(true);
@@ -78,10 +75,7 @@ function Navbar() {
                     <Toggle/>
                 </li>
                 <li className='nav-item'>
-                    <select className="nav-linkz transparent" value={localStorage.getItem("i18nextLng")} onChange={handleLanguageChange}>
-                        <option className='nav-option' value="en">EN</option>
-                        <option className='nav-option' value="pt">PT</option>
-                    </select>
+                    <LanguageSwitcher />
                 </li>
              </ul>
           </div>   
