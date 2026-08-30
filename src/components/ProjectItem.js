@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
+import { FaPlay } from 'react-icons/fa';
 import Modal from './Modal';
 import './Modal.css';
 import ProjectImg from './assets/images/projectImg.webp';
@@ -36,22 +37,27 @@ export default function ProjectItem(
           padding={'20px'}
 			>
 				<Contenido >
-        <div className="projectItem__img">
-          {img2Video ? (
-            <video src={img2} autoPlay loop muted playsInline />
-          ) : url !== "#!" ? (
-            <a href={url} target="_blank" rel="noreferrer">
-              <img border="0" src={img2} alt={t(title)} loading="lazy"/>
-            </a>
-          ) : (
-            <img border="0" src={img2} alt={t(title)} loading="lazy" />
-          )}      
+        <div className="modal__media">
+          {(() => {
+            const media = img2Video ? (
+              <video src={img2} autoPlay loop muted playsInline />
+            ) : (
+              <img border="0" src={img2} alt={t(title)} loading="lazy" />
+            );
+            return url !== "#!" ? (
+              <a href={url} target="_blank" rel="noreferrer">
+                {media}
+                <span className="modal__media-badge"><FaPlay /> {t("watchfullvideo")}</span>
+              </a>
+            ) : media;
+          })()}
         </div>
-					<p>{t(desc)}</p>
+        <div className="modal__content">
+				  <p>{t(desc)}</p>
           <p>{t(desc2)}</p>
-          <br/>
           <h1 className="tooltitle">Tools</h1>
           <div className="svgtool">{tool1}</div>
+        </div>
 				</Contenido>
 			</Modal>
       <div className="projectItem__img">
@@ -75,24 +81,77 @@ export default function ProjectItem(
 }
 const Contenido = styled.div`
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 2rem;
+
+	.modal__media {
+		flex: 1.1;
+		min-width: 0;
+		aspect-ratio: 4 / 5;
+		border-radius: 8px;
+		overflow: hidden;
+		background-color: var(--dark-footer);
+		position: relative;
+	}
+	.modal__media img,
+	.modal__media video,
+	.modal__media a {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+	.modal__media a {
+		position: relative;
+	}
+	.modal__media-badge {
+		position: absolute;
+		bottom: 12px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		background: rgba(0, 0, 0, 0.65);
+		color: #fff;
+		font-size: var(--fs-xs);
+		font-weight: 600;
+		padding: 6px 12px;
+		border-radius: 20px;
+		backdrop-filter: blur(4px);
+		transition: 0.3s ease-in-out;
+		white-space: nowrap;
+	}
+	.modal__media-badge svg {
+		width: 0.8em;
+		height: 0.8em;
+	}
+	.modal__media a:hover .modal__media-badge {
+		background: var(--hover-accent);
+		color: var(--dark-background);
+	}
+	.modal__content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
   
 	h1 {
 		font-size: var(--fs-xl);
 		font-weight: 700;
+		margin-top: 1rem;
 		margin-bottom: 10px;
 	}
 	p {
 		font-size: var(--fs-base);
     width: 100%;
 	}
-	img, video {
-		width: 100%;
-		vertical-align: top;
-		border-radius: 3px;
-	}
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 850px) {
+  flex-direction: column;
+  .modal__media {
+    aspect-ratio: 16 / 10;
+  }
   p {
 		font-size: var(--fs-sm);
     width: 100%;

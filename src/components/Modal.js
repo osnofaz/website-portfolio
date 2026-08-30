@@ -76,6 +76,10 @@ const ContenedorModal = styled.div`
 	background-color: var(--dark-background);
 	border: 1px solid var(--border-subtle);
 	padding: ${props => props.padding ? props.padding : '20px'};
+	width: 100%;
+	max-width: 900px;
+	max-height: 85vh;
+	overflow-y: auto;
 `;
 
 const EncabezadoModal = styled.div`

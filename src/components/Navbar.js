@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import Toggle from './Toggle';
 import LanguageSwitcher from './LanguageSwitcher';
 
@@ -42,34 +42,34 @@ function Navbar() {
              </div>
              <ul className={click ? 'nav-menu active' : 'nav-menu'} >
                  <li className='nav-item'>
-                     <Link to ='/' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/' end className='nav-links' onClick={closeMobileMenu}>
                          {t("homenav")}
-                     </Link>
+                     </NavLink>
                  </li>
                  <li className='nav-item'>
-                     <Link to ='/about' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/about' className='nav-links' onClick={closeMobileMenu}>
                      {t("aboutmenav")}
-                     </Link>
+                     </NavLink>
                  </li>
                  <li className='nav-item'>
-                     <Link to ='/resume' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/resume' className='nav-links' onClick={closeMobileMenu}>
                      {t("resumenav")}
-                     </Link>
+                     </NavLink>
                  </li>
                  <li className='nav-item'>
-                     <Link to ='/projects' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/projects' className='nav-links' onClick={closeMobileMenu}>
                      {t("projectsnav")}
-                     </Link>
+                     </NavLink>
                  </li>
                  <li className='nav-item'>
-                     <Link to ='/stream' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/stream' className='nav-links' onClick={closeMobileMenu}>
                          STREAM
-                     </Link>
+                     </NavLink>
                  </li>
                  <li className='nav-item'>
-                     <Link to ='/contact' className='nav-links' onClick={closeMobileMenu}>
+                     <NavLink to='/contact' className='nav-links' onClick={closeMobileMenu}>
                      {t("contactnav")}
-                     </Link>
+                     </NavLink>
                  </li>
                     <li className='nav-item'>
                     <Toggle/>
