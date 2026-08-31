@@ -13,7 +13,7 @@ import ServicesSection from '../ServicesSection';
 
 
 function Home() {
-     const [estadoModal4, cambiarEstadoModal4] = useState(false);
+     const [isShowreelOpen, setIsShowreelOpen] = useState(false);
      const {t} = useTranslation(['home']);
 
   return (
@@ -30,28 +30,27 @@ function Home() {
         <Link to="./about">
       <button className="btn btn--outline btn--large" > {t("aboutme")} </button>
       </Link>
-      <button className="btn btn--primary btn--large" onClick={() => cambiarEstadoModal4(!estadoModal4)}> {t("showreel")} <i className="far fa-play-circle"></i></button>
+      <button className="btn btn--primary btn--large" onClick={() => setIsShowreelOpen(!isShowreelOpen)}> {t("showreel")} <i className="far fa-play-circle"></i></button>
       </div>
       <div className="scroll-cue">
         <span></span>
       </div>
     </div>
       <Modal
-				estado={estadoModal4}
-				cambiarEstado={cambiarEstadoModal4}
-				titulo="Showreel"
-				mostrarHeader={false}
-				mostrarOverlay={true}
-				posicionModal={'center'}
+				isOpen={isShowreelOpen}
+				onClose={setIsShowreelOpen}
+				title="Showreel"
+				showHeader={false}
+				showOverlay={true}
+				alignment={'center'}
 				padding={'0px'}
 			>
-				<Contenido>
+				<ShowreelModalBody>
         <YoutubeEmbed embedId="VnnJXAvE6OU" />
-				</Contenido>
+				</ShowreelModalBody>
 			</Modal>
       <ServicesSection />
       <FindMeSection />
-      {/* <Cards /> */}
       <Footer />
     </>
   );
@@ -61,26 +60,10 @@ export default Home;
 
 
 
-const Contenido = styled.div`
+const ShowreelModalBody = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	h1 {
-		font-size: 42px;
-		font-weight: 700;
-		margin-bottom: 10px;
-		color:#000000;
-	}
-	p {
-		font-size: 18px;
-		margin-bottom: 20px;
-		color:#000000;
-	}
-	img {
-		width: 100%;
-		vertical-align: top;
-		border-radius: 3px;
-	}
 `;
 
 const YoutubeEmbed = ({ embedId }) => (

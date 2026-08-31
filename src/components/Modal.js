@@ -3,16 +3,16 @@ import styled from 'styled-components';
 
 const Modal = ({
 	children,
-	estado,
-	cambiarEstado,
-	titulo = 'Alerta',
-	mostrarHeader,
-	mostrarOverlay,
-	posicionModal,
+	isOpen,
+	onClose,
+	title = 'Alert',
+	showHeader,
+	showOverlay,
+	alignment,
 	padding
 }) => {
 	useEffect(() => {
-	if (estado) {
+	if (isOpen) {
 		document.body.style.overflow = 'hidden';
 		document.body.classList.add('modal-open');
 	} else {
@@ -24,28 +24,28 @@ const Modal = ({
 		document.body.style.overflow = '';
 		document.body.classList.remove('modal-open');
 	};
-	}, [estado]);
+	}, [isOpen]);
 
 	return (
 		<>
-			{estado && 
-				<Overlay mostrarOverlay={mostrarOverlay} posicionModal={posicionModal}>
-					<ContenedorModal padding={padding}>
+			{isOpen && 
+				<Overlay showOverlay={showOverlay} alignment={alignment}>
+					<ModalContainer padding={padding}>
 										
-					<button onClick={() => cambiarEstado(false)} className="botaofechar">
+					<button onClick={() => onClose(false)} className="closeButton">
 						<i className="fas fa-times"></i>
 						</button>
-						{mostrarHeader && 
+						{showHeader && 
 
-							<EncabezadoModal>
-								<h3>{titulo}</h3>
-							</EncabezadoModal>
+							<ModalHeader>
+								<h3>{title}</h3>
+							</ModalHeader>
 						}
 
 						
 
 						{children}
-					</ContenedorModal>
+					</ModalContainer>
 				</Overlay>
 			}
 		</>
@@ -61,15 +61,15 @@ const Overlay = styled.div`
 	position: fixed;
 	top: 65px;
 	left: 0;
-	background: ${props => props.mostrarOverlay ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)'};
+	background: ${props => props.showOverlay ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,0)'};
 	padding: 40px;
 	display: flex;
-	align-items: ${props => props.posicionModal ? props.posicionModal : 'center'};
+	align-items: ${props => props.alignment ? props.alignment : 'center'};
 	justify-content: center;
 	z-index: 2;
 `;
 
-const ContenedorModal = styled.div`
+const ModalContainer = styled.div`
 	min-height: 100px;
 	position: relative;
 	border-radius: 5px;
@@ -82,7 +82,7 @@ const ContenedorModal = styled.div`
 	overflow-y: auto;
 `;
 
-const EncabezadoModal = styled.div`
+const ModalHeader = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

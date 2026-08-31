@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import styled from 'styled-components';
 import { FaPlay } from 'react-icons/fa';
 import Modal from './Modal';
-import './Modal.css';
 import ProjectImg from './assets/images/projectImg.webp';
 
 
@@ -20,7 +19,7 @@ export default function ProjectItem(
   url = '',
   tool1 ='',
 }) {
-  const [estadoModal1, cambiarEstadoModal1] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const {t} = useTranslation(['projects']);
 
    
@@ -28,15 +27,15 @@ export default function ProjectItem(
   return (
     <ProjectItemStyles>
                 <Modal
-					estado={estadoModal1}
-          cambiarEstado={cambiarEstadoModal1}
-          titulo={t(title)}
-          mostrarHeader={true}
-          mostrarOverlay={true}
-          posicionModal={'center'}
+					isOpen={isModalOpen}
+          onClose={setIsModalOpen}
+          title={t(title)}
+          showHeader={true}
+          showOverlay={true}
+          alignment={'center'}
           padding={'20px'}
 			>
-				<Contenido >
+				<ModalBody >
         <div className="modal__media">
           {(() => {
             const media = img2Video ? (
@@ -58,7 +57,7 @@ export default function ProjectItem(
           <h1 className="tooltitle">Tools</h1>
           <div className="svgtool">{tool1}</div>
         </div>
-				</Contenido>
+				</ModalBody>
 			</Modal>
       <div className="projectItem__img">
         {imgVideo ? (
@@ -69,8 +68,8 @@ export default function ProjectItem(
       </div>
       <div className="projectItem__info">          
           <h3 className="projectItem__title">{t(title)}</h3>
-          <p className="modal__description">{t(desc)}</p>
-          <button className="btn btn--primary btn--large" onClick={() => cambiarEstadoModal1(!estadoModal1)}>{t("moreinfo")} </button>
+          <p className="projectItem__desc">{t(desc)}</p>
+          <button className="btn btn--primary btn--large" onClick={() => setIsModalOpen(!isModalOpen)}>{t("moreinfo")} </button>
       </div> 
 
     
@@ -79,10 +78,10 @@ export default function ProjectItem(
     </ProjectItemStyles>
   );
 }
-const Contenido = styled.div`
+const ModalBody = styled.div`
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	gap: 2rem;
 
 	.modal__media {
@@ -203,6 +202,7 @@ const ProjectItemStyles = styled.div`
   .projectItem__desc {
     font-size: var(--fs-base);
     margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   @media only screen and (max-width: 768px) {
     .projectItem__img{

@@ -26,7 +26,7 @@ function ResumeNew() {
       <Container fluid className="resume-section">
         <Row style={{ justifyContent: "center", position: "relative" }}>
         <div>
-          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> DOWNLOAD CV</a>
+          <a className="downloadButton" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> DOWNLOAD CV</a>
         </div>
         </Row>
 
@@ -38,7 +38,7 @@ function ResumeNew() {
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
         <div>
-          <a className="botaodownload" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> DOWNLOAD CV</a>
+          <a className="downloadButton" type="submit" href={pdf} download="AfonsoPereiraCV.pdf"><AiOutlineDownload style={{ height: "40px", width: "40px" }} /> DOWNLOAD CV</a>
         </div>
         </Row>
       </Container>
